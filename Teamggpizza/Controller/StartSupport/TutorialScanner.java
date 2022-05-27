@@ -1,15 +1,13 @@
-package StartObject;
+package StartSupport;
 
 import java.util.Scanner;
 
-import UI.Scanners;
+public class TutorialScanner extends StartingSub {
 
-public class TutorialScannerSub extends StartingSub implements Scanners {
 
 	Scanner sc = new Scanner(System.in);
-
-	@Override
-	public int scannerSubInt() {
+	
+	public void firstView() {
 
 		System.out.println(
 				"==========================================================================================================");
@@ -23,15 +21,6 @@ public class TutorialScannerSub extends StartingSub implements Scanners {
 		System.out.print("Select number = ");
 		number = sc.nextInt();
 		System.out.println();
-
-		return number;
-		
-	}
-
-	@Override
-	public void scannerSub() {
-
-		
 		
 	}
 

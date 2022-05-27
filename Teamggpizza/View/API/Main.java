@@ -1,10 +1,15 @@
 package API;
 
+import StartObject.Starting;
+
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+		Starting exe = new Starting();
+		
+		exe.startMain();
+		
 	}
 
 }
