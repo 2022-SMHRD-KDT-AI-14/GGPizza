@@ -25,19 +25,19 @@ public class RandomQuestion extends StartingSub {
 			questionList.orderList.get(rdQuest); // 할당 받은 random 질문List를 get
 
 		} else if (level == 2) {
-			rdQuest = rd.nextInt(10) + 15; // 질문List에 있는 index 15~24까지만 불러오기(level 2 기준)
+			rdQuest = rd.nextInt(24); // 질문List에 있는 index 0~24까지만 불러오기(level 1+2 기준)
 			questionList.orderList.get(rdQuest); // 할당 받은 random 질문List를 get
 
 		} else if (level == 3) {
-			rdQuest = rd.nextInt(10) + 25; // 질문List에 있는 index 25~34까지만 불러오기(level 3 기준)
+			rdQuest = rd.nextInt(20) + 15; // 질문List에 있는 index 15~34까지만 불러오기(level 2+3 기준)
 			questionList.orderList.get(rdQuest); // 할당 받은 random 질문List를 get
 
 		} else if (level == 4) {
-			rdQuest = rd.nextInt(12) + 35; // 질문List에 있는 index 35~46까지만 불러오기(level 4 기준)
+			rdQuest = rd.nextInt(22) + 25; // 질문List에 있는 index 25~46까지만 불러오기(level 3+4 기준)
 			questionList.orderList.get(rdQuest); // 할당 받은 random 질문List를 get
 
 		} else if (level == 5) {
-			rdQuest = rd.nextInt(15) + 47; // 질문List에 있는 index 47~61까지만 불러오기(level 5 기준)
+			rdQuest = rd.nextInt(27) + 35; // 질문List에 있는 index 35~61까지만 불러오기(level 4+5 기준)
 			questionList.orderList.get(rdQuest); // 할당 받은 random 질문List를 get
 		}
 
