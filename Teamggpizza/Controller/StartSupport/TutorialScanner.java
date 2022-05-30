@@ -19,7 +19,8 @@ public class TutorialScanner extends StartingSub {
 				"==========================================================================================================");
 		System.out.println();
 		System.out.print("Select number = ");
-		number = sc.nextInt();
+		number = sc.nextInt(); 
+		// number에 수 할당, number에 따라 각기 다른 메뉴 전개
 		System.out.println();
 		
 	}

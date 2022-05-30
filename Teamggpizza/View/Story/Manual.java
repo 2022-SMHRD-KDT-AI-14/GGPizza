@@ -9,6 +9,7 @@ public class Manual extends StartingSub {
 	public void tutorial() {
 
 		name = "안지은";
+		// Scanner로 name을 받을지 DB로 받을지 결정한 뒤 할당ㄴ
 
 		System.out.println("==========================================================================================================");
 		System.out.println("Story");
@@ -24,7 +25,8 @@ public class Manual extends StartingSub {
 		System.out.println();
 		
 	}
-
+	
+//      대사 입력이 필요할 땐 아래 복사 후 "대사" 부분만 입력
 //	    System.out.println("[제임스 고슬링] " + talkSub + "대사" + talkSub);
 //		System.out.println("[" + name + "] " + talkSub + "대사" + talkSub);
 
