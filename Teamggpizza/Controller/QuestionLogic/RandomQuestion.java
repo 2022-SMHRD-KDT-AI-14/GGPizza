@@ -20,7 +20,7 @@ public class RandomQuestion extends StartingSub {
 		if(level == 1) {
 			
 			rdQuest = rd.nextInt(2); // 질문List에 있는 index 2까지만 불러오기(level 1 기준)
-			questionList.day1List.get(rdQuest); // 할당 받은 random 질문List를 get
+			questionList.orderList.get(rdQuest); // 할당 받은 random 질문List를 get
 			
 		}
 		

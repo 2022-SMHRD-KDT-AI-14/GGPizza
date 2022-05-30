@@ -21,7 +21,7 @@ public class Answer extends StartingSub {
 	public void answerScanner() {
 
 		System.out.println();
-		System.out.println("손님 : "+sub+day1quest.day1List.get(nowLevel)+sub);
+		System.out.println("손님 : "+sub+Day1_Question.orderList.get(nowLevel)+sub);
 		System.out.println("토핑을 추가해주세요.");
 		System.out.println("추가할 토핑이 없다면" + sub + "없음" + sub + "이라고 입력");
 		System.out.print("반죽을 펴고 다음 토핑은? : ");
