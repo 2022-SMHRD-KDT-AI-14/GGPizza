@@ -3,11 +3,17 @@ package StartSupport;
 
 import java.util.Scanner;
 
+import Story.Manual;
 import UI.Numbers;
 
 public class StartSelectNumber extends StartingSub implements Numbers {
 
 	Scanner sc = new Scanner(System.in);
+	
+	protected String id;
+	protected String pw;
+	
+	Manual manual = new Manual();
 	
 	@Override
 	public void numberOf1() {
@@ -76,6 +82,18 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 			// 회원가입 part이며, case 1과 내용 동일
 			// account method add
 			// Main game load method
+			
+			System.out.print("아이디 입력 : ");
+			id = sc.next();
+			System.out.print("비밀번호 입력 : ");
+			pw = sc.next();
+			
+			if(id.equals("master") && pw.equals("master")) {
+				
+				manual.tutorial();
+				
+			}
+			
 			break;
 
 		}
