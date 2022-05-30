@@ -6,7 +6,11 @@ import java.util.Scanner;
 import Story.Manual;
 import UI.Numbers;
 
+
 public class StartSelectNumber extends StartingSub implements Numbers {
+	
+	MemberDAO dao = new MemberDAO();
+	MemberDTO dto;
 	
 	Scanner sc = new Scanner(System.in);
 	
@@ -23,7 +27,29 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 			System.out.println("[1] 로그인 [2] 회원가입");
 			System.out.println();
 			System.out.print("Select number test = ");
-			number = sc.nextInt(); 
+			number = sc.nextInt();
+			
+			while (true) {
+				 if (number == 1) {
+
+					System.out.println("로그인");
+					System.out.print("ID 입력하세요 : ");
+					String id = sc.next();
+					System.out.print("PW 입력하세요 : ");
+					String pw = sc.next();
+					dto = new MemberDTO(id, pw);
+					dao.login(dto);
+					break;
+				}
+			}
+				if(number ==2) {
+					
+					
+				}
+
+			}
+			
+			
 			// firstview()에서 할당받은 number가 한 번 더 초기화되는 part
 			accountSet();
 			/* number 할당 후 accountSet()로 전개 
@@ -32,7 +58,6 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 
 		}
 
-	}
 
 	@Override
 	public void numberOf2() {
@@ -103,6 +128,7 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 		number = 0;
 
 	}
-
-
 }
+
+
+
