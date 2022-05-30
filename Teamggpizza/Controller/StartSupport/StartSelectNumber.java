@@ -7,7 +7,7 @@ import Story.Manual;
 import UI.Numbers;
 
 public class StartSelectNumber extends StartingSub implements Numbers {
-
+	
 	Scanner sc = new Scanner(System.in);
 	
 	protected String id;
@@ -68,12 +68,25 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 
 		case 1:
 			System.out.println();
-			System.out.println("[id slot]");
-			System.out.println("[pw slot]");
 			// id, pw method part
 			// 구현해야 하는 method 목록은 아래와 같음
 			// id, pw method add add
 			// Main game load method add
+
+			System.out.print("아이디 입력 : ");
+			id = sc.next();
+			System.out.print("비밀번호 입력 : ");
+			pw = sc.next();
+			
+			if(id.equals("master") && pw.equals("master")) {
+				
+				System.out.println();
+				manual.tutorial();
+				manual.manual();
+				// master id, test 계정으로 아이디, 비밀번호를 master 입력시 스토리 진행
+				
+			}
+			
 			break;
 
 		case 2:
@@ -82,17 +95,6 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 			// 회원가입 part이며, case 1과 내용 동일
 			// account method add
 			// Main game load method
-			
-			System.out.print("아이디 입력 : ");
-			id = sc.next();
-			System.out.print("비밀번호 입력 : ");
-			pw = sc.next();
-			
-			if(id.equals("master") && pw.equals("master")) {
-				
-				manual.tutorial();
-				
-			}
 			
 			break;
 

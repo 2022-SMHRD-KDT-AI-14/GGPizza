@@ -1,18 +1,19 @@
 package StartObject;
 
 import StartSupport.Assembly;
+import UI.Games;
 import UI.Tutorial;
 
-public class Starting extends Assembly  {
+public class Starting extends Assembly implements Games  {
 	
 	
-
-
-	public void logON() {
+	@Override
+	public void mainGame() {
 		
-		tutorial();
+		
 		
 	}
+	
 
 	public void readerBoard() {
 
@@ -21,7 +22,8 @@ public class Starting extends Assembly  {
 	
 	public void startMain() {
 		
-		logON();
+		tutorial();
+		Game();
 		
 	}
 	
