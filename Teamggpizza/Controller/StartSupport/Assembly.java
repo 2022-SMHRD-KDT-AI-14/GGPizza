@@ -1,5 +1,6 @@
 package StartSupport;
 
+import Story.Manual;
 import UI.Tutorial;
 
 public class Assembly implements Tutorial {
@@ -8,6 +9,7 @@ public class Assembly implements Tutorial {
 	
 	TutorialScanner tutosc = new TutorialScanner();
 	StartSelectNumber startnum = new StartSelectNumber();
+	Manual manual = new Manual();
 	
 	@Override
 	public void tutorial() { 
@@ -29,6 +31,8 @@ public class Assembly implements Tutorial {
 	
 	@Override
 	public void manual() {
+		
+		manual.tutorial();
 		
 		/* tutorial 전개가 끝난 뒤 manual이 보여지는 view part
 		   기능상 start 부분이지만 전개에서 직관성을 위해
