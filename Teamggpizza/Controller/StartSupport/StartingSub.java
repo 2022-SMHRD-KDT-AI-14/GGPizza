@@ -10,6 +10,10 @@ public class StartingSub {
 	    // Score, turn 역시 이 곳에 public static으로 선언
 	
 		public static int number;
+		public static int level;
+		public static int day;
+		public static int nowLevel;
+		public static int money;
 		public static String name;
 
 }
