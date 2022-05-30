@@ -9,7 +9,7 @@ public class Manual extends StartingSub {
 	public void tutorial() {
 
 		name = "안지은";
-		// Scanner로 name을 받을지 DB로 받을지 결정한 뒤 할당ㄴ
+		// Scanner로 name을 받을지 DB로 받을지 결정한 뒤 할당
 
 		System.out.println("==========================================================================================================");
 		System.out.println("Story");
