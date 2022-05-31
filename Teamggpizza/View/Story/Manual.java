@@ -22,7 +22,7 @@ public class Manual extends StartingSub {
 		System.out.print(talkSub+"네"+talkSub+"라고 입력 >> ");
 		enter = sc.next();
 
-
+		System.out.println();
 		// System.out.println(
 		// 		"==========================================================================================================");
 		System.out.println("[★Story★]");
