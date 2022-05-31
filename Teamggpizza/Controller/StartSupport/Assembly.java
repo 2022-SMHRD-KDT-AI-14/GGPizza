@@ -17,32 +17,6 @@ public class Assembly extends StartingSub implements Tutorial {
 	int cnt;
 	String enter;
 
-	@Override
-	public void tutorial() {
-		TutorialScanner tutosc = new TutorialScanner();
-		StartSelectNumber startnum = new StartSelectNumber();
-		RandomQuestion rdQuest = new RandomQuestion();
-		Answer ans = new Answer();
-		Manual manual = new Manual();
-		Day1_Question dayList = new Day1_Question();
-		AnswerMatching ansMat = new AnswerMatching();
-		AwCheck ach = new AwCheck();
-		
-		// view에서 처음으로 보여지는 tutorial part
-
-		tutosc.firstView();
-		// 첫 시작 메뉴와 스캐너로 number에 수를 할당
-
-		startnum.numberOf1();
-		startnum.numberOf2();
-		startnum.numberOf3();
-		/*
-		 * 스캔 받은 number에 따라 다르게 전개되는 start 구간 모두 startSelectNumber.class 안에 있는 method
-		 * 이름에서 보여지듯 start 부분만 할당되고 해당 number에 method를 부여 다음 chapter로 연결할 예정
-		 */
-
-		dayList.day1Quest();
-	}
 
 	@Override
 	public void manual() {
@@ -67,6 +41,35 @@ public class Assembly extends StartingSub implements Tutorial {
 		
 	}
 
+	@Override
+	public void tutorial() {
+		TutorialScanner tutosc = new TutorialScanner();
+		StartSelectNumber startnum = new StartSelectNumber();
+		RandomQuestion rdQuest = new RandomQuestion();
+		Answer ans = new Answer();
+		Manual manual = new Manual();
+		Day1_Question dayList = new Day1_Question();
+		AnswerMatching ansMat = new AnswerMatching();
+		AwCheck ach = new AwCheck();
+		
+		// view에서 처음으로 보여지는 tutorial part
+		
+		tutosc.firstView();
+		// 첫 시작 메뉴와 스캐너로 number에 수를 할당
+		
+		startnum.numberOf1();
+		startnum.numberOf2();
+		startnum.numberOf3();
+		/*
+		 * 스캔 받은 number에 따라 다르게 전개되는 start 구간 모두 startSelectNumber.class 안에 있는 method
+		 * 이름에서 보여지듯 start 부분만 할당되고 해당 number에 method를 부여 다음 chapter로 연결할 예정
+		 */
+		
+		dayList.day1Quest();
+		manual();
+		
+	}
+	
 	public void Game() {
 		
 		TutorialScanner tutosc = new TutorialScanner();
