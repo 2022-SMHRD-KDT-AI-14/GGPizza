@@ -25,7 +25,7 @@ public class Answer extends StartingSub {
 		System.out.println();
 		System.out.println("<<< 피자를 만들어보자! >>>");
 		System.out.println("[★Tip★] 추가할 토핑이 없다면 " + sub + "없음" + sub + "이라고 입력하세요.");
-		
+
 		System.out.print("반죽을 펴고 다음 토핑은? : ");
 		answer.add(sc.next()); // 토핑을 추가할 때마다 answer array에 할당
 		System.out.println();
@@ -41,9 +41,12 @@ public class Answer extends StartingSub {
 				if (answer.get(i).equals("없음")) {
 					answer.remove("없음"); // 없음이라는 문자의 배열을 지워줌
 					a += 1;
+
 				}
 			}
 		}
+
+		a = 0;
 
 	}
 
