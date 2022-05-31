@@ -34,12 +34,13 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 				 if (number == 1) {
 
 					System.out.println("로그인");
-					System.out.print("ID 입력하세요 : ");
-					String id = sc.next();
-					System.out.print("PW 입력하세요 : ");
-					String pw = sc.next();
-					dto = new MemberDTO(id, pw);
-					dao.login(dto);
+//					System.out.print("ID 입력하세요 : ");
+//					String id = sc.next();
+//					System.out.print("PW 입력하세요 : ");
+//					String pw = sc.next();
+//					dto = new MemberDTO(id, pw);
+//					dao.login(dto);
+					accountSet();
 					break;
 				}
 			}
@@ -67,7 +68,6 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 			
 			
 			// firstview()에서 할당받은 number가 한 번 더 초기화되는 part
-			accountSet();
 			/* number 할당 후 accountSet()로 전개 
 			 * 할당 받은 number로 accountSet()에서 각기 다른 로그인 메뉴로 진행됨
 			 * 해당 method에는 각기 다른 slot이 있고 그에 대한 method 구현 */
