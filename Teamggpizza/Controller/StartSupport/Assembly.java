@@ -21,6 +21,8 @@ public class Assembly extends StartingSub implements Tutorial {
 	AnswerMatching ansMat = new AnswerMatching();
 	AwCheck ach = new AwCheck();
 
+	int cnt;
+
 	@Override
 	public void tutorial() {
 		// view에서 처음으로 보여지는 tutorial part
@@ -44,19 +46,30 @@ public class Assembly extends StartingSub implements Tutorial {
 
 		manual.tutorial();
 		manual.manual();
-		
+
 		/*
 		 * 수정하는 부분들을 위해 편의상 메뉴얼 UI만 존재할 뿐 Starting에는 할당되지 않음 tutorial과 manual 출력은
 		 * accountSet method 내 switch문 case 1에 존재함
 		 */
+		
 	}
 
 	public void Game() {
 
-		// 본 게임 시작
-		rdQuest.rdQuestNum(); // 랜덤 질문 List method
-		ans.answerScanner(); // 질문에 대한 토핑 답하는 method
-		ach.levels(); // 정답 매칭 시스템
+		level+=1;
+		
+		while (cnt != 25) {
+
+			// 본 게임 시작
+			rdQuest.rdQuestNum(); // 랜덤 질문 List method
+			ans.answerScanner(); // 질문에 대한 토핑 답하는 method
+			ach.levels(); // 정답 매칭 시스템
+			cnt++;
+			ans.answer.clear();
+			System.out.println();
+			System.out.println("Cnt view Test : " + cnt);
+
+		}
 
 		System.out.println();
 		System.out.println("test money value : " + money);
