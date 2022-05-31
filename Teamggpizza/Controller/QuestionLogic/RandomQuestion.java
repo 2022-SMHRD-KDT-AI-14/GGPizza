@@ -15,11 +15,23 @@ public class RandomQuestion extends StartingSub {
 		Day1_Question questionList = new Day1_Question();
 		Random rd = new Random();
 		
-		dayCnt++;
-		if (dayCnt < 31 && dayCnt % 5 == 0) {
-			level += 1;
-		}
+//		dayCnt++;
+//		if (dayCnt < 31 && dayCnt % 5 == 0) {
+//			level += 1;
+//		}
 		
+		// 날짜에 따른 레벨값 지정 날짜++이 매출 정산할때 되서 처음에 시작은 0 > 레벨1 ... 순차로 봐야함
+		if (day == 0) {
+			level = 1;
+		}else if (day== 1) {
+			level = 2;
+		}else if (day== 2) {
+			level = 3;
+		}else if (day== 3) {
+			level = 4;
+		}else if (day== 4) {
+			level = 5;
+		}
 
 		/*
 		 * 시작과 동시에 우선 level +1이 이루어지고, 추가적으로 다른 로직을 통해서 특정 구간마다 level이 오르도록 구현할 예정

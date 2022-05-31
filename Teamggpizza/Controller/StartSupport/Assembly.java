@@ -78,6 +78,7 @@ public class Assembly extends StartingSub implements Tutorial {
 		Day1_Question dayList = new Day1_Question();
 		AnswerMatching ansMat = new AnswerMatching();
 		AwCheck ach = new AwCheck();
+		Scanner sc = new Scanner(System.in);
 
 		level += 1;
 
@@ -85,16 +86,37 @@ public class Assembly extends StartingSub implements Tutorial {
 
 			// 본 게임 시작
 			rdQuest.rdQuestNum(); // 랜덤 질문 List method
+			
+			if (cnt == 0 || cnt == 5 || cnt == 10 || cnt == 15 || cnt == 20 || cnt == 25 ) {
+				System.out.println("[ Day " + (day + 1) + " ★ 시작! ]");
+			} // 게임시작시 day 표시
+			
 			ans.answerScanner(); // 질문에 대한 토핑 답하는 method
 			ach.levels(); // 정답 매칭 시스템
 			cnt++;
-
-			if (cnt % 5 == 0) {
-
+			char talkSub = '"';
+			String enter = "";
+			
+			if (cnt % 5 == 0) { // 5문제씩 카운트
 				day++;
+				
 				System.out.println();
-				System.out.println("Day : " + day);
-				System.out.println(day + "번째 날 중간 정산 : " + money);
+				System.out.println("===============================================================");
+				System.out.println("제임스 고슬링씨 : " + talkSub + "고생했다. 퇴근할 시간이다!" + talkSub);
+				System.out.println(name + " : " + talkSub + "오예~ 칼퇴하자!!!" + talkSub);
+				System.out.println("===============================================================");
+				System.out.println();
+
+				System.out.println("[ Day " + day + " 판매 종료 ]");
+				System.out.println("▶ 전체 수익 : " + money + "원 ◀");
+
+				System.out.println();
+				System.out.println("===============================================================");
+
+				if (day < 5) { 
+					System.out.print("다음날로 갈까요? " + talkSub + "네" + talkSub + "라고 입력 >> ");
+					enter = sc.next();
+				}
 
 			}
 

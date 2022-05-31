@@ -19,8 +19,6 @@ public class Answer extends StartingSub {
 	int a; // while 멈추는 용도로 값 할당하는 int
 
 	public void answerScanner() {
-
-		System.out.println();
 		System.out.println("★☆★ 주문 ★☆★");
 		System.out.println("손님 : " + sub + Day1_Question.orderList.get(nowLevel) + sub);
 		System.out.println();

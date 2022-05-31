@@ -65,6 +65,7 @@ public class Manual extends StartingSub {
 		System.out.println("주문을 받겠습니까?");
 		System.out.print(talkSub+"네"+talkSub+"라고 입력 >> ");
 		enter = sc.next();
+		System.out.println();
 
 	}
 

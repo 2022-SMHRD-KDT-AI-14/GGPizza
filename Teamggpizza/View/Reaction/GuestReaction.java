@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class GuestReaction {
 
 	ArrayList<String> goodAwList = new ArrayList<String>();
+	
 	public void goodAw() {
 		goodAwList.add("감동받았어요! 이 피자를 본 제가 말이에요!"); // 0
 		goodAwList.add("누가 저한테 초능력 탐지기 좀 주세요. 이 오븐술사가 방금 제 생각을 완벽하게 읽었어요."); // 1
@@ -20,6 +21,7 @@ public class GuestReaction {
 	}
 
 	ArrayList<String> badAwList = new ArrayList<String>();
+	
 	public void badAw() {
 		badAwList.add("이게 전부인가요?"); // 0
 		badAwList.add("피자에 정성이 부족해요!"); // 1
