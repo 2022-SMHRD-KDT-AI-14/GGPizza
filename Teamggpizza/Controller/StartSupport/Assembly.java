@@ -1,5 +1,7 @@
 package StartSupport;
 
+import java.util.Scanner;
+
 import AnswerLogic.Answer;
 import AnswerLogic.AnswerMatching;
 import AnswerLogic.AwCheck;
@@ -12,19 +14,20 @@ public class Assembly extends StartingSub implements Tutorial {
 
 	// 각 챕터별 세부적으로 method를 조합하는 class 입니다.
 
-	TutorialScanner tutosc = new TutorialScanner();
-	StartSelectNumber startnum = new StartSelectNumber();
-	RandomQuestion rdQuest = new RandomQuestion();
-	Answer ans = new Answer();
-	Manual manual = new Manual();
-	Day1_Question dayList = new Day1_Question();
-	AnswerMatching ansMat = new AnswerMatching();
-	AwCheck ach = new AwCheck();
-
 	int cnt;
+	String enter;
 
 	@Override
 	public void tutorial() {
+		TutorialScanner tutosc = new TutorialScanner();
+		StartSelectNumber startnum = new StartSelectNumber();
+		RandomQuestion rdQuest = new RandomQuestion();
+		Answer ans = new Answer();
+		Manual manual = new Manual();
+		Day1_Question dayList = new Day1_Question();
+		AnswerMatching ansMat = new AnswerMatching();
+		AwCheck ach = new AwCheck();
+		
 		// view에서 처음으로 보여지는 tutorial part
 
 		tutosc.firstView();
@@ -43,9 +46,19 @@ public class Assembly extends StartingSub implements Tutorial {
 
 	@Override
 	public void manual() {
+		TutorialScanner tutosc = new TutorialScanner();
+		StartSelectNumber startnum = new StartSelectNumber();
+		RandomQuestion rdQuest = new RandomQuestion();
+		Answer ans = new Answer();
+		Manual manual = new Manual();
+		Day1_Question dayList = new Day1_Question();
+		AnswerMatching ansMat = new AnswerMatching();
+		AwCheck ach = new AwCheck();
+		Scanner sc = new Scanner(System.in);
 
 		manual.tutorial();
 		manual.manual();
+
 
 		/*
 		 * 수정하는 부분들을 위해 편의상 메뉴얼 UI만 존재할 뿐 Starting에는 할당되지 않음 tutorial과 manual 출력은
@@ -55,6 +68,15 @@ public class Assembly extends StartingSub implements Tutorial {
 	}
 
 	public void Game() {
+		
+		TutorialScanner tutosc = new TutorialScanner();
+		StartSelectNumber startnum = new StartSelectNumber();
+		RandomQuestion rdQuest = new RandomQuestion();
+		Answer ans = new Answer();
+		Manual manual = new Manual();
+		Day1_Question dayList = new Day1_Question();
+		AnswerMatching ansMat = new AnswerMatching();
+		AwCheck ach = new AwCheck();
 
 		level+=1;
 		

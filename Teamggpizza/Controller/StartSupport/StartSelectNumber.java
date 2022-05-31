@@ -78,6 +78,7 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 
 	@Override
 	public void numberOf3() {
+		
 
 		if(number == 3) {
 			
@@ -90,6 +91,8 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 
 	public void accountSet() {
 
+		Assembly assem = new Assembly();
+		
 		switch (number) {
 
 		case 1:
@@ -107,8 +110,7 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 			if(id.equals("master") && pw.equals("master")) {
 				
 				System.out.println();
-				manual.tutorial();
-				manual.manual();
+				assem.manual();
 				// master id, test 계정으로 아이디, 비밀번호를 master 입력시 스토리 진행
 				
 			}
