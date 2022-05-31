@@ -11,6 +11,7 @@ public class StartingSub {
 	
 		public static int number;
 		public static int level;
+		public static int day;
 		public static int dayCnt;
 		public static int nowLevel;
 		public static int money;
