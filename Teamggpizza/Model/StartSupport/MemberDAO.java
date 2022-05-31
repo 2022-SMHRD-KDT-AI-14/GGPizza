@@ -321,11 +321,9 @@ public void select() {
 		// 3. SQL¹® ½ÇÇà
 //		String sql = "select PW from member order by PW desc";
 //		String sql = "select rownum as rank, PW from (select PW from member order by PW desc)";
-<<<<<<< HEAD
+
 		String sql = "select rownum as rank, ID, MaxMoney from (select ID, max(Money) as MaxMoney from member group by ID order by max(Money) desc) where rownum<11";
-=======
-		String sql = "select rownum as rank, ID, MaxMoney from (select ID, max(PW) as MaxMoney from member group by ID order by max(PW) desc) where rownum<11";
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-14/GGPizza.git
+
 		
 		try {
 			psmt = conn.prepareStatement(sql);
@@ -333,12 +331,8 @@ public void select() {
 //			System.out.printf("rank");
             System.out.printf("%10s","[Rank]");
             System.out.printf("%15s","[ID]");
-<<<<<<< HEAD
             System.out.printf("%15s","[Money]");
-=======
-            System.out.printf("%15s","[PW]");
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-14/GGPizza.git
-            System.out.println();
+
 			
 			while (rs.next()) {
 //				String pw = rs.getString(1);
@@ -347,14 +341,11 @@ public void select() {
                 String id = rs.getString(2);
                 String pw = rs.getString(3);
                 System.out.printf("%7s",rank);
-<<<<<<< HEAD
+
                 System.out.printf("%12s",id);
                 System.out.printf("%15s",pw);
-=======
-                System.out.printf("%20s",id);
-                System.out.printf("%13s",pw);
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-14/GGPizza.git
-                System.out.println();
+
+
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
