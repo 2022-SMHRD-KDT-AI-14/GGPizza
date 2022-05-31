@@ -265,7 +265,6 @@ public void select() {
 			
 			String sql = "insert into member values(?, ?, ?,0)";
 			psmt = conn.prepareStatement(sql);
-			
 			psmt.setString(1, id);
 			psmt.setString(2, pw);
 			psmt.setString(3, name);
