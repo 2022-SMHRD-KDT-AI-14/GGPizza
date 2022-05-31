@@ -303,15 +303,14 @@ public void select() {
 
 	
 	public int rank() {
-
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace(); // ex) sc.nextInt
 		}
-		String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe"; // db 林家
-		String db_id = "campus_e_0516_5"; // db_id
-		String db_pw = "smhrd5"; // db_pw
+		String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe"; // db 林家
+		String db_id = "hr"; // db_id
+		String db_pw = "hr"; // db_pw
 		try {
 			conn = DriverManager.getConnection(url, db_id, db_pw);
 			if (conn != null) {
@@ -322,15 +321,15 @@ public void select() {
 		// 3. SQL巩 角青
 //		String sql = "select PW from member order by PW desc";
 //		String sql = "select rownum as rank, PW from (select PW from member order by PW desc)";
-		String sql = "select rownum as rank, ID, PW from (select ID, PW from member order by PW desc)";
+		String sql = "select rownum as rank, ID, MaxMoney from (select ID, max(Money) as MaxMoney from member group by ID order by max(Money) desc) where rownum<11";
 		
 		try {
 			psmt = conn.prepareStatement(sql);
 			rs = psmt.executeQuery();
 //			System.out.printf("rank");
-            System.out.print("[Rank]" + "\t");
-            System.out.print("[ID]" + "\t"+"\t");
-            System.out.print("[PW]");
+            System.out.printf("%10s","[Rank]");
+            System.out.printf("%15s","[ID]");
+            System.out.printf("%15s","[Money]");
             System.out.println();
 			
 			while (rs.next()) {
@@ -339,9 +338,9 @@ public void select() {
                 String rank = rs.getString(1);
                 String id = rs.getString(2);
                 String pw = rs.getString(3);
-                System.out.print(rank+"\t");
-                System.out.print(id+"\t"+"\t");
-                System.out.print(pw);
+                System.out.printf("%7s",rank);
+                System.out.printf("%12s",id);
+                System.out.printf("%15s",pw);
                 System.out.println();
 			}
 		} catch (SQLException e) {
@@ -364,11 +363,14 @@ public void select() {
 		}
 		return cnt;
 	}
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
 
