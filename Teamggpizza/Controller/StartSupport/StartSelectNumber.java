@@ -57,7 +57,7 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 			String id= sc.next();
 			System.out.print("PW를 입력하세요 >> ");
 			String pw= sc.next();
-			System.out.print("이름를 입력하세요 >> ");
+			System.out.print("NickName를 입력하세요 >> ");
 			String name= sc.next();
 			
 			dto = new MemberDTO(id, pw, name);
