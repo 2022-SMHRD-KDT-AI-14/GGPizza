@@ -9,6 +9,7 @@ import java.sql.SQLException;
 
 
 public class MemberDAO {
+	int cnt;
 	MemberDTO dto = new MemberDTO(null, null);
 	Connection conn;
 	PreparedStatement psmt;
@@ -228,6 +229,73 @@ public void select() {
 //		System.out.println("배고파");
 		
 	}
+
+	
+	public int rank() {
+
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace(); // ex) sc.nextInt
+		}
+		String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe"; // db 주소
+		String db_id = "campus_e_0516_5"; // db_id
+		String db_pw = "smhrd5"; // db_pw
+		try {
+			conn = DriverManager.getConnection(url, db_id, db_pw);
+			if (conn != null) {
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		// 3. SQL문 실행
+//		String sql = "select PW from member order by PW desc";
+//		String sql = "select rownum as rank, PW from (select PW from member order by PW desc)";
+		String sql = "select rownum as rank, ID, PW from (select ID, PW from member order by PW desc)";
+		
+		try {
+			psmt = conn.prepareStatement(sql);
+			rs = psmt.executeQuery();
+//			System.out.printf("rank");
+            System.out.print("[Rank]" + "\t");
+            System.out.print("[ID]" + "\t"+"\t");
+            System.out.print("[PW]");
+            System.out.println();
+			
+			while (rs.next()) {
+//				String pw = rs.getString(1);
+//				System.out.printf("\n" + pw);
+                String rank = rs.getString(1);
+                String id = rs.getString(2);
+                String pw = rs.getString(3);
+                System.out.print(rank+"\t");
+                System.out.print(id+"\t"+"\t");
+                System.out.print(pw);
+                System.out.println();
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null) {
+					rs.close();
+				}
+				if (psmt != null) {
+					psmt.close();
+				}
+				if (conn != null) {
+					conn.close();
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return cnt;
+		}
+	}
+
+
+
 
 
 }

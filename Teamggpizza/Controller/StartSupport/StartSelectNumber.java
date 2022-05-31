@@ -71,9 +71,26 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 			 * ranking reader board method add
 			 * Main Game load method add */
 			
+			System.out.println("====랭킹조회====");
+			
+//			System.out.print("PW를 입력하세요>>");
+//			String pw = sc.next();
+//			MemberDTO dto1 = new MemberDTO(pw);
+			
+			MemberDAO dao = new MemberDAO();
+//			dao.rank();
+			
+			int cnt = dao.rank();
+			if(cnt>0) {
+				System.out.println("랭킹조회");
+			} else {
+				System.out.println();
+			}
+		}
+			
 		}
 
-	}
+
 
 	@Override
 	public void numberOf3() {
