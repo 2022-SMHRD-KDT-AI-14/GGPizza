@@ -11,6 +11,7 @@ public class LevelAll extends AnswerMatching {
 
 	public void Level5() {
 		
+		
 		if(level==5){ // level은 StartingSub stack에 저장되어 있음
 			
 			if (nowLevel == 47) { // 현재 array Random 할당되는 값에 따라서 nowLevel에 값 할당
