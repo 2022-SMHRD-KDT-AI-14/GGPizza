@@ -21,11 +21,11 @@ public class RandomQuestion extends StartingSub {
 		 */
 
 		if (level == 1) {
-			rdQuest = rd.nextInt(14); // 질문List에 있는 index 0~14까지만 불러오기(level 1 기준)
+			rdQuest = rd.nextInt(15); // 질문List에 있는 index 0~14까지만 불러오기(level 1 기준)
 			questionList.orderList.get(rdQuest); // 할당 받은 random 질문List를 get
 
 		} else if (level == 2) {
-			rdQuest = rd.nextInt(24); // 질문List에 있는 index 0~24까지만 불러오기(level 1+2 기준)
+			rdQuest = rd.nextInt(25); // 질문List에 있는 index 0~24까지만 불러오기(level 1+2 기준)
 			questionList.orderList.get(rdQuest); // 할당 받은 random 질문List를 get
 
 		} else if (level == 3) {
