@@ -33,17 +33,18 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 				 if (number == 1) {
 
 					System.out.println("로그인");
-//					System.out.print("ID 입력하세요 : ");
-//					String id = sc.next();
-//					System.out.print("PW 입력하세요 : ");
-//					String pw = sc.next();
-//					dto = new MemberDTO(id, pw);
-//					dao.login(dto);
+					System.out.print("ID 입력하세요 : ");
+					String id = sc.next();
+					System.out.print("PW 입력하세요 : ");
+					String pw = sc.next();
+					dto = new MemberDTO(id, pw);
+					dao.login(dto);
 					accountSet();
 					break;
 				}
 			}
 				if(number ==2) {
+					
 					
 					
 				}
