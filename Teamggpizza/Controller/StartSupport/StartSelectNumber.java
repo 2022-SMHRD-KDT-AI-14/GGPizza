@@ -12,7 +12,7 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 	@Override
 	public void numberOf1() {
 
-		if (number == 1) {
+		if (number == 1) {j
 
 			System.out.println("[1] 로그인 [2] 회원가입");
 			System.out.println();
