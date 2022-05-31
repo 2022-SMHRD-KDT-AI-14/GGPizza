@@ -3,6 +3,7 @@ package StartSupport;
 
 import java.util.Scanner;
 
+
 import Story.Manual;
 import UI.Numbers;
 
@@ -44,7 +45,22 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 				}
 			}
 				if(number ==2) {
+					System.out.println("====회원가입====");
+					System.out.print("ID를 입력하세요 >> ");
+					String id= sc.next();
+					System.out.print("PW를 입력하세요 >> ");
+					String pw= sc.next();
+					System.out.print("이름를 입력하세요 >> ");
+					String name= sc.next();
 					
+					 dto = new MemberDTO(id, pw, name);
+					 dao = new MemberDAO();
+					int cnt = dao.insert(dto);
+					if(cnt>0) {
+						System.out.println("회원가입 성공");
+					}else {
+						System.out.println("ID가 중복되었습니다.");
+					}
 					
 					
 				}
