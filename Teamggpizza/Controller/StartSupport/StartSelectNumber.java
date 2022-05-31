@@ -30,9 +30,10 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 			System.out.print("Select number test = ");
 			number = sc.nextInt();
 			
-			while (true) {
-				 if (number == 1) {
-
+			if (number == 1) {
+				
+				while (true) {
+					
 					System.out.println("로그인");
 					System.out.print("ID 입력하세요 : ");
 					String id = sc.next();
@@ -42,30 +43,32 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 					dao.login(dto);
 					accountSet();
 					break;
+					
 				}
 			}
-				if(number ==2) {
-					System.out.println("====회원가입====");
-					System.out.print("ID를 입력하세요 >> ");
-					String id= sc.next();
-					System.out.print("PW를 입력하세요 >> ");
-					String pw= sc.next();
-					System.out.print("이름를 입력하세요 >> ");
-					String name= sc.next();
-					
-					 dto = new MemberDTO(id, pw, name);
-					 dao = new MemberDAO();
-					int cnt = dao.insert(dto);
-					if(cnt>0) {
-						System.out.println("회원가입 성공");
-					}else {
-						System.out.println("ID가 중복되었습니다.");
-					}
-					
-					
-				}
 
 			}
+		
+		if(number ==2) {
+			System.out.println("====회원가입====");
+			System.out.print("ID를 입력하세요 >> ");
+			String id= sc.next();
+			System.out.print("PW를 입력하세요 >> ");
+			String pw= sc.next();
+			System.out.print("이름를 입력하세요 >> ");
+			String name= sc.next();
+			
+			dto = new MemberDTO(id, pw, name);
+			dao = new MemberDAO();
+			int cnt = dao.insert(dto);
+			if(cnt>0) {
+				System.out.println("회원가입 성공");
+			}else {
+				System.out.println("ID가 중복되었습니다.");
+			}
+			
+			
+		}
 			
 			
 			// firstview()에서 할당받은 number가 한 번 더 초기화되는 part
