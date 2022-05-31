@@ -23,16 +23,14 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 	@Override
 	public void numberOf1() {
 		
-		int number1=0;
-
 		if (number == 1) {
 
 			System.out.println("[1] 로그인 [2] 회원가입");
 			System.out.println();
 			System.out.print("Select number test = ");
-			number1 = sc.nextInt();
+			number = sc.nextInt();
 			
-			if (number1 == 1) {
+			if (number == 1) {
 				
 				while (true) {
 					
@@ -51,13 +49,13 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 
 			}
 		
-		if(number1 ==2) {
+		if(number ==2) {
 			System.out.println("====회원가입====");
 			System.out.print("ID를 입력하세요 >> ");
 			String id= sc.next();
 			System.out.print("PW를 입력하세요 >> ");
 			String pw= sc.next();
-			System.out.print("이름를 입력하세요 >> ");
+			System.out.print("NickName를 입력하세요 >> ");
 			String name= sc.next();
 			
 			dto = new MemberDTO(id, pw, name);

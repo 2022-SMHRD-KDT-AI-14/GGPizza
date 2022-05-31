@@ -244,7 +244,7 @@ public void select() {
 			// 컴파일(compile) 이후에 알 수 있는 에러들에 대해서도
 			// 예외처리를 해줘야 한다
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			System.out.println("드라이버 로딩 성공");
+//			System.out.println("드라이버 로딩 성공");
 			
 			// 2. DB 연결
 			// 1) url 2) db_id 3) db_pw
@@ -255,7 +255,7 @@ public void select() {
 			conn = DriverManager.getConnection(url, db_id, db_pw);
 			// !conn.isClosed()
 			if(conn != null) {
-				System.out.println("접속 성공");
+//				System.out.println("접속 성공");
 			}
 			
 			// 3. SQL문 실행

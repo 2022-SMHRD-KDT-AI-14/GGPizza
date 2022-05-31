@@ -7,17 +7,19 @@ import Story.Day1_Question;
 
 public class RandomQuestion extends StartingSub {
 
-	Day1_Question questionList = new Day1_Question();
-	Random rd = new Random();
 
 	int rdQuest;
 
 	public int rdQuestNum() {
 
+		Day1_Question questionList = new Day1_Question();
+		Random rd = new Random();
+		
 		dayCnt++;
 		if (dayCnt < 31 && dayCnt % 5 == 0) {
 			level += 1;
 		}
+		
 
 		/*
 		 * 시작과 동시에 우선 level +1이 이루어지고, 추가적으로 다른 로직을 통해서 특정 구간마다 level이 오르도록 구현할 예정
