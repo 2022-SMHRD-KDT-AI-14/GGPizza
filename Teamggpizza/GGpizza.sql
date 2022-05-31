@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 drop table member cascade constraints;
 create table member(
   ID varchar(12) not null,
@@ -6,3 +7,5 @@ create table member(
   money number(10) default(0),
   constraint member_ID_pk primary key(ID)
 );
+
+select * from MEMBER;
