@@ -51,12 +51,13 @@ public class Assembly extends StartingSub implements Tutorial {
 		 * 수정하는 부분들을 위해 편의상 메뉴얼 UI만 존재할 뿐 Starting에는 할당되지 않음 tutorial과 manual 출력은
 		 * accountSet method 내 switch문 case 1에 존재함
 		 */
-		level+=1;
 		
 	}
 
 	public void Game() {
 
+		level+=1;
+		
 		while (cnt != 25) {
 
 			// 본 게임 시작
