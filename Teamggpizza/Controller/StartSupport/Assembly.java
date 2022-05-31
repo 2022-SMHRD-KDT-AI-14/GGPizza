@@ -5,7 +5,6 @@ import AnswerLogic.AnswerMatching;
 import QuestionLogic.RandomQuestion;
 import Story.Day1_Question;
 import Story.Manual;
-import UI.Games;
 import UI.Tutorial;
 
 public class Assembly extends StartingSub implements Tutorial {
@@ -22,7 +21,6 @@ public class Assembly extends StartingSub implements Tutorial {
 
 	@Override
 	public void tutorial() {
-
 		// view에서 처음으로 보여지는 tutorial part
 
 		tutosc.firstView();
@@ -37,7 +35,6 @@ public class Assembly extends StartingSub implements Tutorial {
 		 */
 
 		dayList.day1Quest();
-
 	}
 
 	@Override
@@ -45,12 +42,11 @@ public class Assembly extends StartingSub implements Tutorial {
 
 		manual.tutorial();
 		manual.manual();
-
+		
 		/*
 		 * 수정하는 부분들을 위해 편의상 메뉴얼 UI만 존재할 뿐 Starting에는 할당되지 않음 tutorial과 manual 출력은
 		 * accountSet method 내 switch문 case 1에 존재함
 		 */
-
 	}
 
 	public void Game() {
