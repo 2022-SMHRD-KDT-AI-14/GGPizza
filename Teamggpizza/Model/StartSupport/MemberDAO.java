@@ -368,14 +368,6 @@ public void select() {
 
 
 
-<<<<<<< HEAD
 
-
-
-
-
-=======
-
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-14/GGPizza.git
 }
 
