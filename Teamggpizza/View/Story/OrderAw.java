@@ -18,7 +18,6 @@ public class OrderAw {
 		goodAwList.add("좋았어! 내가 주문한대로군요. GOOD!"); // 9
 		// index num 0~9
 		}
-
 	
 	ArrayList<String> badAwList = new ArrayList<String>();
 	
