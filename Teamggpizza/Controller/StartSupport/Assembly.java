@@ -2,6 +2,7 @@ package StartSupport;
 
 import AnswerLogic.Answer;
 import AnswerLogic.AnswerMatching;
+import AnswerLogic.AwCheck;
 import QuestionLogic.RandomQuestion;
 import Story.Day1_Question;
 import Story.Manual;
@@ -18,6 +19,7 @@ public class Assembly extends StartingSub implements Tutorial {
 	Manual manual = new Manual();
 	Day1_Question dayList = new Day1_Question();
 	AnswerMatching ansMat = new AnswerMatching();
+	AwCheck ach = new AwCheck();
 
 	@Override
 	public void tutorial() {
@@ -54,7 +56,7 @@ public class Assembly extends StartingSub implements Tutorial {
 		// 본 게임 시작
 		rdQuest.rdQuestNum(); // 랜덤 질문 List method
 		ans.answerScanner(); // 질문에 대한 토핑 답하는 method
-		ansMat.answerMT_day1(); // 답한 토핑에 대해 매칭을 하는 로직을 가진 method
+		ach.levels(); // 정답 매칭 시스템
 
 		System.out.println();
 		System.out.println("test money value : " + money);

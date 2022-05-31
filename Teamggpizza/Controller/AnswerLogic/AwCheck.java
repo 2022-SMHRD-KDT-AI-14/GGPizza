@@ -665,4 +665,13 @@ public class AwCheck extends AnswerMatching {
 		} // level == 5 end
 	}
 
+	public void levels() {
+		Level1();
+		Level2();
+		Level3();
+		Level4();
+		Level5();
+	}
+
+	
 }
