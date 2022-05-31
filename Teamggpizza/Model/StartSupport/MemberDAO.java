@@ -263,9 +263,8 @@ public void select() {
 			String pw = dto.getPw();
 			String name = dto.getName();
 			
-			String sql = "insert into member values(?, ?, ?)";
+			String sql = "insert into member values(?, ?, ?,0)";
 			psmt = conn.prepareStatement(sql);
-			
 			psmt.setString(1, id);
 			psmt.setString(2, pw);
 			psmt.setString(3, name);
@@ -308,9 +307,9 @@ public void select() {
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace(); // ex) sc.nextInt
 		}
-		String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe"; // db 林家
-		String db_id = "hr"; // db_id
-		String db_pw = "hr"; // db_pw
+		String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe"; // db 林家
+		String db_id = "campus_e_0516_5"; // db_id
+		String db_pw = "smhrd5"; // db_pw
 		try {
 			conn = DriverManager.getConnection(url, db_id, db_pw);
 			if (conn != null) {
@@ -345,6 +344,7 @@ public void select() {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
+			System.out.println("某摹1");
 		} finally {
 			try {
 				if (rs != null) {
@@ -359,6 +359,7 @@ public void select() {
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
+				System.out.println("某摹2");
 			}
 		}
 		return cnt;
