@@ -23,54 +23,55 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 	int i = 0;
 	@Override
 	public void numberOf1() {
-		
+
 		if (number == 1) {
 
 			System.out.println(" [1] 로그인  [2] 회원가입");
 			System.out.print(" 숫자를 입력하세요 >> ");
-			number = sc.nextInt();
-			System.out.println("==========================================================================================================");
-			
-			if (number == 1) {
-				
-				while (true) {
-					
-					//System.out.println("로그인");
+			int number1 = sc.nextInt();
+			System.out.println(
+					"==========================================================================================================");
+			while (true) {
+
+				if (number1 == 1) {
+
+					// System.out.println("로그인");
 					System.out.print(" ID를 입력하세요 >> ");
 					String id = sc.next();
 					System.out.print(" PW를 입력하세요 >> ");
 					String pw = sc.next();
 					dto = new MemberDTO(id, pw);
 					dao.login(dto);
-					accountSet();
-					break;
+					manual.tutorial();
+					manual.manual();
 					
+
+				}
+
+				if (number1 == 2) {
+					System.out.println("====회원가입====");
+					System.out.print(" ID를 입력하세요 >> ");
+					String id = sc.next();
+					System.out.print(" PW를 입력하세요 >> ");
+					String pw = sc.next();
+					System.out.print(" NickName를 입력하세요 >> ");
+					String name = sc.next();
+
+					dto = new MemberDTO(id, pw, name, money);
+					dao = new MemberDAO();
+					int cnt = dao.insert(dto);
+					i++;
+					if (cnt > 0) {
+						System.out.println("회원가입 성공");
+						 numberOf1();
+					} else {
+						System.out.println("아이디가 중복되어 회원가입에 실패하였습니다.");
+						System.out.println("다시 회원가입 하세요.");
+					}
 				}
 			}
-
-			
-		
-		if(number ==2) {
-			System.out.println("====회원가입====");
-			System.out.print(" ID를 입력하세요 >> ");
-			String id= sc.next();
-			System.out.print(" PW를 입력하세요 >> ");
-			String pw= sc.next();
-			System.out.print(" NickName를 입력하세요 >> ");
-			String name= sc.next();
-			
-			dto = new MemberDTO(id, pw, name, money);
-			dao = new MemberDAO();
-			int cnt = dao.insert(dto);
-			i++;
-			if(cnt>0) {
-				System.out.println("회원가입 성공");
-			}else {
-				System.out.println("ID가 중복되었습니다.");
-			}
 		}
-		}
-		}
+	}
 			
 			
 			// firstview()에서 할당받은 number가 한 번 더 초기화되는 part
