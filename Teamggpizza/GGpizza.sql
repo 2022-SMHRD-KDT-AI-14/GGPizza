@@ -8,3 +8,5 @@ create table member(
 );
 
 select * from MEMBER;
+
+select nickname from member where id = 'kjg';

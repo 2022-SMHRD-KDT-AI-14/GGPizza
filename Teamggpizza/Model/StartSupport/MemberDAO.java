@@ -433,5 +433,50 @@ public void select() {
 		}
 		return cnt;
 	}
+
+	
+	public void nickname() {
+		
+		
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe";
+		String db_id = "campus_e_0516_5";
+		String db_pw = "smhrd5";
+		
+		
+		try {
+			conn = DriverManager.getConnection(url, db_id, db_pw);
+			if(conn != null) {
+//				System.out.println("DB 연결 성공");
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		String sql = "select NICKNAME from member where id = '"+dto.getId()+"'";
+		try {
+			psmt = conn.prepareStatement(sql);
+			rs = psmt.executeQuery();
+			if(rs.next()) {
+			 String result = rs.getString(1);
+			 System.out.print(result);
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+
+
 }	
 

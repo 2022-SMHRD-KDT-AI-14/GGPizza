@@ -11,6 +11,7 @@ public class Manual extends StartingSub {
 
 	char talkSub;
 	String enter;
+	
 
 	public void tutorial() {
 
@@ -19,7 +20,7 @@ public class Manual extends StartingSub {
 		
 		talkSub = '"';
 		// MemberDTO dto = new MemberDTO(name);
-		name = "사용자닉네임";
+		name  = "사용자이름";
 		
 		// Scanner로 name을 받을지 DB로 받을지 결정한 뒤 할당
 		
