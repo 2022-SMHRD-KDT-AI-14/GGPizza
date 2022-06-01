@@ -16,5 +16,8 @@ public class StartingSub {
 		public static int nowLevel;
 		public static int money;
 		public static String name;
+		
+		public static int awCheck;
+		public static int nowReaction;
 
 }

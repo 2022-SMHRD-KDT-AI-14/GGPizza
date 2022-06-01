@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class GuestReaction {
 
-	ArrayList<String> goodAwList = new ArrayList<String>();
+	public static ArrayList<String> goodAwList = new ArrayList<String>();
 	
 	public void goodAw() {
 		goodAwList.add("감동받았어요! 이 피자를 본 제가 말이에요!"); // 0
@@ -17,10 +17,11 @@ public class GuestReaction {
 		goodAwList.add("인생은 오래 살고 볼 일이군요. 피자가 너무 맛있어요."); // 7
 		goodAwList.add("제 손에 들린 피자만큼 맛있는 피자는 없을 거예요."); // 8
 		goodAwList.add("좋았어! 내가 주문한대로군요. GOOD!"); // 9
-		// index num 0~9
+		goodAwList.add("맛있는 피자는 용현쌤도 노래부르게 한다!"); // 10
+		// index num 0~10
 	}
 
-	ArrayList<String> badAwList = new ArrayList<String>();
+	public static ArrayList<String> badAwList = new ArrayList<String>();
 	
 	public void badAw() {
 		badAwList.add("이게 전부인가요?"); // 0
@@ -33,7 +34,8 @@ public class GuestReaction {
 		badAwList.add("피자를 발로 만드셨나요..."); // 7
 		badAwList.add("오우... 몬스터... 피자라니!"); // 8
 		badAwList.add("이건 아닌거 같아요!"); // 9
-		// index num 0~9
+		badAwList.add("ppp우우우우우qqq"); // 10
+		// index num 0~10
 	}
 
 }

@@ -5,7 +5,9 @@ import java.util.Scanner;
 import AnswerLogic.Answer;
 import AnswerLogic.AnswerMatching;
 import AnswerLogic.AwCheck;
+import GuestReactionLogic.RandomReaction;
 import QuestionLogic.RandomQuestion;
+import Reaction.GuestReaction;
 import Story.Day1_Question;
 import Story.Manual;
 import UI.Tutorial;
@@ -79,6 +81,7 @@ public class Assembly extends StartingSub implements Tutorial {
 		AnswerMatching ansMat = new AnswerMatching();
 		AwCheck ach = new AwCheck();
 		Scanner sc = new Scanner(System.in);
+		RandomReaction rdReaction = new RandomReaction();
 
 		level += 1;
 
@@ -93,6 +96,13 @@ public class Assembly extends StartingSub implements Tutorial {
 			
 			ans.answerScanner(); // 질문에 대한 토핑 답하는 method
 			ach.levels(); // 정답 매칭 시스템
+			
+			if (awCheck==1) {
+				System.out.println("정답입니다");
+			} else {
+				System.out.println("정답이아닙니다");
+			}
+			
 			cnt++;
 			char talkSub = '"';
 			String enter = "";
