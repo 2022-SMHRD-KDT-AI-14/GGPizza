@@ -1,8 +1,5 @@
 package AnswerLogic;
 
-import GuestReactionLogic.RandomReaction;
-import Reaction.GuestReaction;
-
 public class AwCheck extends AnswerMatching {
 
 	public void Level1() {
@@ -15,7 +12,7 @@ public class AwCheck extends AnswerMatching {
 						// 추가로 비교할 토핑 많아지면 if로 다중 처리
 						if (ans.answer.get(i).equals("소스")) {
 							money += 3000;
-							awCheck=1;
+							awReactionCheck=1;
 						}
 					}
 				}
@@ -28,7 +25,7 @@ public class AwCheck extends AnswerMatching {
 						// 추가로 비교할 토핑 많아지면 if로 다중 처리
 						if (ans.answer.get(i).equals("치즈")) {
 							money += 4000;
-							awCheck=1;
+							awReactionCheck=1;
 						}
 					}
 				}
@@ -50,7 +47,7 @@ public class AwCheck extends AnswerMatching {
 						}
 						if (cnt == ans.answer.size()) { // 정답재료의 수 만큼 카운트
 							money += 7000; // 참이면 매출에 더하기
-							awCheck=1;
+							awReactionCheck=1;
 						}
 					}
 				}

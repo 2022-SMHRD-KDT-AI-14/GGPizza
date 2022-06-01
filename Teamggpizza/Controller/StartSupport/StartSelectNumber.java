@@ -25,19 +25,19 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 		
 		if (number == 1) {
 
-			System.out.println("[1] 로그인 [2] 회원가입");
-			System.out.println();
-			System.out.print("Select number test = ");
+			System.out.println(" [1] 로그인  [2] 회원가입");
+			System.out.print(" 숫자를 입력하세요 >> ");
 			number = sc.nextInt();
+			System.out.println("==========================================================================================================");
 			
 			if (number == 1) {
 				
 				while (true) {
 					
-					System.out.println("로그인");
-					System.out.print("ID 입력하세요 : ");
+					//System.out.println("로그인");
+					System.out.print(" ID를 입력하세요 >> ");
 					String id = sc.next();
-					System.out.print("PW 입력하세요 : ");
+					System.out.print(" PW를 입력하세요 >> ");
 					String pw = sc.next();
 					dto = new MemberDTO(id, pw);
 					dao.login(dto);
@@ -51,11 +51,11 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 		
 		if(number ==2) {
 			System.out.println("====회원가입====");
-			System.out.print("ID를 입력하세요 >> ");
+			System.out.print(" ID를 입력하세요 >> ");
 			String id= sc.next();
-			System.out.print("PW를 입력하세요 >> ");
+			System.out.print(" PW를 입력하세요 >> ");
 			String pw= sc.next();
-			System.out.print("NickName를 입력하세요 >> ");
+			System.out.print(" NickName를 입력하세요 >> ");
 			String name= sc.next();
 			
 			dto = new MemberDTO(id, pw, name);
@@ -122,10 +122,10 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 			// id, pw method add add
 			// Main game load method add
 
-			System.out.print("아이디 입력 : ");
-			id = sc.next();
-			System.out.print("비밀번호 입력 : ");
-			pw = sc.next();
+//			System.out.print("아이디 입력 : ");
+			id = dto.getId();
+//			System.out.print("비밀번호 입력 : ");
+			pw = dto.getPw();
 			
 			if(id.equals("master") && pw.equals("master")) {
 				
