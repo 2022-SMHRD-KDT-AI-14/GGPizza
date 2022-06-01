@@ -40,5 +40,7 @@ public class MemberDTO {
 	public void setPw(String pw) {
 		this.pw = pw;
 	}
+	
+	
 
 }

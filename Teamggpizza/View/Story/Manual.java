@@ -2,6 +2,9 @@ package Story;
 
 import java.util.Scanner;
 
+import StartSupport.MemberDAO;
+import StartSupport.MemberDTO;
+import StartSupport.StartSelectNumber;
 import StartSupport.StartingSub;
 
 public class Manual extends StartingSub {
@@ -13,9 +16,10 @@ public class Manual extends StartingSub {
 
 		Scanner sc = new Scanner(System.in);
 
+		
 		talkSub = '"';
-
-		name = "안지은";
+		// MemberDTO dto = new MemberDTO(name);
+		name = "사용자닉네임";
 		
 		// Scanner로 name을 받을지 DB로 받을지 결정한 뒤 할당
 		
