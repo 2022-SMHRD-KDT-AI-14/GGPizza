@@ -42,9 +42,8 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 					String pw = sc.next();
 					dto = new MemberDTO(id, pw);
 					dao.login(dto);
-					manual.tutorial();
-					manual.manual();
-					
+					accountSet();
+					break;
 
 				}
 
