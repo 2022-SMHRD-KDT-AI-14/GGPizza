@@ -9,7 +9,7 @@ import java.sql.SQLException;
 
 
 
-public class MemberDAO {
+public class MemberDAO extends StartingSub{
 	int cnt;
 	MemberDTO dto = new MemberDTO(null, null);
 	Connection conn;
@@ -278,7 +278,7 @@ public void select() {
 			System.out.println("드라이버 로딩 실패");
 		} catch (SQLException e) {
 			
-			e.printStackTrace();
+//			e.printStackTrace();
 			System.out.println("회원가입 실패");
 		} finally {
 			// 4. 연결 종료 : 역순으로 닫는다!!
@@ -293,14 +293,76 @@ public void select() {
 				}
 				
 			} catch (SQLException e) {
-				e.printStackTrace();
+//				e.printStackTrace();
 			}
 			
 		}
 		return cnt;
 	}
 
+	public void updateMoney(int money, String id) {
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+			
+		
+		String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe";
+		String db_id = "campus_e_0516_5";
+		String db_pw = "smhrd5";
+		try {
+			conn = DriverManager.getConnection(url, db_id, db_pw);			
+			String sql = "update member set money = ? where id = ?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setInt(1, money);
+			psmt.setString(2, id);
+
+			psmt.executeUpdate();
+		} catch(Exception e) {
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+	}
 	
+	private void close() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public int getMoney(String id) {
+
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}				
+	String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe";
+	String db_id = "campus_e_0516_5";
+	String db_pw = "smhrd5";
+	try {
+		conn = DriverManager.getConnection(url, db_id, db_pw);			
+		String sql = "select id, money from member where id = ?";
+		psmt = conn.prepareStatement(sql);
+		psmt.setInt(1, money);
+		rs= psmt.executeQuery();
+		if(rs.next()) {
+			String get_id = rs.getString("ID");
+			int get_money = rs.getInt("money");
+			
+			if(get_id .equals(id)) {
+				money = get_money;
+			}
+		}
+
+	} catch(Exception e) {
+		e.printStackTrace();
+	} finally {
+		close();
+	}
+	return money;
+}
 	public int rank() {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -317,11 +379,8 @@ public void select() {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		// 3. SQL문 실행
-//		String sql = "select PW from member order by PW desc";
-//		String sql = "select rownum as rank, PW from (select PW from member order by PW desc)";
-
-		String sql = "select rownum, ID, nickname, MaxMoney from (select ID, nickname, max(Money) as MaxMoney from member group by ID, nickname, money order by max(Money) desc) where rownum<11";
+		
+		String sql = "select rownum, ID, nickname, Money from (select ID, nickname, Money from member group by ID, nickname, money order by Money desc) where rownum<11";
 
 
 		

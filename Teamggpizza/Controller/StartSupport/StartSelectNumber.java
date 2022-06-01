@@ -17,6 +17,7 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 	
 	protected String id;
 	protected String pw;
+	protected int money;
 	
 	Manual manual = new Manual();
 	int i = 0;
@@ -58,7 +59,7 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 			System.out.print(" NickName를 입력하세요 >> ");
 			String name= sc.next();
 			
-			dto = new MemberDTO(id, pw, name);
+			dto = new MemberDTO(id, pw, name, money);
 			dao = new MemberDAO();
 			int cnt = dao.insert(dto);
 			i++;
