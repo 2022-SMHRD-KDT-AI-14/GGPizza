@@ -262,8 +262,9 @@ public void select() {
 			String id = dto.getId();
 			String pw = dto.getPw();
 			String name = dto.getName();
+			int money1 = dto.getMoney(money);
 			
-			String sql = "insert into member values(?, ?, ?, 0)";
+			String sql = "insert into member values(?, ?, ?, ?)";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, id);
 			psmt.setString(2, pw);
@@ -433,13 +434,4 @@ public void select() {
 		return cnt;
 	}
 }	
-
-
-
-
-
-
-
-
-
 

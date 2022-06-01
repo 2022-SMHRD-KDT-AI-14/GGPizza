@@ -3,7 +3,8 @@ package StartSupport;
 public class MemberDTO extends StartingSub{
 
 	private String id, pw, name;
-	private int money;
+	private int money1;
+
 
 	public MemberDTO(String id, String pw){
 		super();
@@ -11,12 +12,12 @@ public class MemberDTO extends StartingSub{
 		this.pw = pw;
 	}
 
-	public MemberDTO(String id, String pw, String name, int money) {
+	public MemberDTO(String id, String pw, String name, int money1) {
 		super();
 		this.id = id;
 		this.pw = pw;
 		this.name = name;
-		this.money = 0;
+		this.money1 = money;
 	}
 
 	public String getName() {
@@ -42,12 +43,12 @@ public class MemberDTO extends StartingSub{
 	public void setPw(String pw) {
 		this.pw = pw;
 	}
-	public int getMoney(int money) {
-		return money;
+	public int getMoney(int money1) {
+		return money1;
 	}
 
-	public void setMoney(int money) {
-		this.money = money;
+	public void setMoney(int money1) {
+		this.money1 = money1;
 	}
 	
 	
