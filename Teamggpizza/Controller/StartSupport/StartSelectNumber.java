@@ -95,6 +95,8 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 				 * Main Game load method add */								
 				MemberDAO dao = new MemberDAO();
 			int cnt = dao.rank();
+			
+			
 			}
 			}
 			}

@@ -262,8 +262,9 @@ public void select() {
 			String id = dto.getId();
 			String pw = dto.getPw();
 			String name = dto.getName();
+			int money1 = dto.getMoney(money);
 			
-			String sql = "insert into member values(?, ?, ?,0)";
+			String sql = "insert into member values(?, ?, ?, ?)";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, id);
 			psmt.setString(2, pw);
@@ -300,7 +301,7 @@ public void select() {
 		return cnt;
 	}
 
-	public void updateMoney(int money, String id) {
+	public void updateMoney(int money1, String id) {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 		} catch (ClassNotFoundException e) {
@@ -315,7 +316,7 @@ public void select() {
 			conn = DriverManager.getConnection(url, db_id, db_pw);			
 			String sql = "update member set money = ? where id = ?";
 			psmt = conn.prepareStatement(sql);
-			psmt.setInt(1, money);
+			psmt.setInt(1, money1);
 			psmt.setString(2, id);
 
 			psmt.executeUpdate();
@@ -400,12 +401,12 @@ public void select() {
                 String rank = rs.getString(1);
                 String id = rs.getString(2);
                 String nickname = rs.getString(3);
-                int money= rs.getInt(4);
+                int money1 = rs.getInt(4);
                 
                 System.out.print("  "+ rank);
                 System.out.printf("%17s", id);
                 System.out.printf("%22s", nickname);
-                System.out.printf("%20d",money);
+                System.out.printf("%20d", money1);
                 System.out.println();
                 
                 
@@ -478,13 +479,4 @@ public void select() {
 
 
 }	
-
-
-
-
-
-
-
-
-
 
