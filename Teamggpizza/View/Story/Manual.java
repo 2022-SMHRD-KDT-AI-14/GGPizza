@@ -1,7 +1,6 @@
 package Story;
 
 import java.util.Scanner;
-
 import StartSupport.StartingSub;
 
 public class Manual extends StartingSub {
