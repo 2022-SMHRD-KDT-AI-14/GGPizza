@@ -88,7 +88,7 @@ public class Day1_Question {
 		// index num 41 answer : 소스, 피망, 소시지
 		
 		orderList.add("소시지랑 피망이랑 사귀는 거 맞죠?"); // 42
-		orderList.add("저는 소시지랑 피망가 같이 구워졌을 때의 향을 좋아해요"); // 43
+		orderList.add("저는 소시지랑 피망이 같이 구워졌을 때의 향을 좋아해요"); // 43
 		// index num 42~43 answer : 소스, 치즈, 피망, 소시지
 		
 		orderList.add("페퍼로니와 소시지가 들어간 피자주세요"); // 44
