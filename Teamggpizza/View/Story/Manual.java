@@ -1,6 +1,7 @@
 package Story;
 
 import java.util.Scanner;
+
 import StartSupport.StartingSub;
 
 public class Manual extends StartingSub {
@@ -15,6 +16,7 @@ public class Manual extends StartingSub {
 		talkSub = '"';
 
 		name = "안지은";
+		
 		// Scanner로 name을 받을지 DB로 받을지 결정한 뒤 할당
 		
 		System.out.println("게임을 시작해볼까요?");

@@ -3,7 +3,7 @@ package StartSupport;
 public class MemberDTO {
 
 	private String id, pw, name;
-	
+
 	public MemberDTO(String id, String pw) {
 		super();
 		this.id = id;
@@ -17,11 +17,9 @@ public class MemberDTO {
 		this.name = name;
 	}
 
-
 	public String getName() {
 		return name;
 	}
-	
 
 	public void setName(String name) {
 		this.name = name;
