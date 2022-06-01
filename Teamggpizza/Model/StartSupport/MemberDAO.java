@@ -321,30 +321,35 @@ public void select() {
 //		String sql = "select PW from member order by PW desc";
 //		String sql = "select rownum as rank, PW from (select PW from member order by PW desc)";
 
-		String sql = "select rownum as rank, ID, MaxMoney from (select ID, max(Money) as MaxMoney from member group by ID order by max(Money) desc) where rownum<11";
+		String sql = "select rownum, ID, nickname, MaxMoney from (select ID, nickname, max(Money) as MaxMoney from member group by ID, nickname, money order by max(Money) desc) where rownum<11";
+
 
 		
 		try {
 			psmt = conn.prepareStatement(sql);
 			rs = psmt.executeQuery();
 //			System.out.printf("rank");
-            System.out.printf("%10s","[Rank]");
-            System.out.printf("%15s","[ID]");
-            System.out.printf("%15s","[Money]");
-
+            System.out.printf("%-10s","[Rank]");            
+            System.out.printf("%10s","[ID]");
+            System.out.printf("%25s","[Nickname]");            
+            System.out.printf("%20s","[Money]");
+            System.out.println();
 			
 			while (rs.next()) {
 //				String pw = rs.getString(1);
 //				System.out.printf("\n" + pw);
                 String rank = rs.getString(1);
                 String id = rs.getString(2);
-                String pw = rs.getString(3);
-                System.out.printf("%7s",rank);
-
-                System.out.printf("%12s",id);
-                System.out.printf("%15s",pw);
-
-
+                String nickname = rs.getString(3);
+                int money= rs.getInt(4);
+                
+                System.out.print("  "+ rank);
+                System.out.printf("%17s", id);
+                System.out.printf("%22s", nickname);
+                System.out.printf("%20d",money);
+                System.out.println();
+                
+                
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

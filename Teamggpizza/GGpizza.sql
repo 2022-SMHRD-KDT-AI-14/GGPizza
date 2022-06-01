@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 drop table member cascade constraints;
 create table member(
   ID varchar(12) not null,

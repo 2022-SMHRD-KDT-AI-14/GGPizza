@@ -19,7 +19,7 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 	protected String pw;
 	
 	Manual manual = new Manual();
-	
+	int i = 0;
 	@Override
 	public void numberOf1() {
 		
@@ -47,7 +47,7 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 				}
 			}
 
-			}
+			
 		
 		if(number ==2) {
 			System.out.println("====회원가입====");
@@ -61,13 +61,14 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 			dto = new MemberDTO(id, pw, name);
 			dao = new MemberDAO();
 			int cnt = dao.insert(dto);
+			i++;
 			if(cnt>0) {
 				System.out.println("회원가입 성공");
 			}else {
 				System.out.println("ID가 중복되었습니다.");
 			}
-			
-			
+		}
+		}
 		}
 			
 			
@@ -76,42 +77,28 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 			 * 할당 받은 number로 accountSet()에서 각기 다른 로그인 메뉴로 진행됨
 			 * 해당 method에는 각기 다른 slot이 있고 그에 대한 method 구현 */
 
-		}
+//		}
 
 
 	@Override
 	public void numberOf2() {
 
 		if (number == 2) {
-
-			System.out.println("[ranking viewer slot]");
-			/* 같은 논리로 firstview에서 할당된 후 number가 2일시 랭킹보드 진입 전개
-			 * 이 part에서는 랭킹이 보여진 후 mainGame 전개로 돌아오는 method 구현이 되어야 함
-			 * 현재 필요한 method는 아래 목록과 같음
-			 * ranking reader board method add
-			 * Main Game load method add */
-			
-			System.out.println("====랭킹조회====");
-			
-//			System.out.print("PW를 입력하세요>>");
-//			String pw = sc.next();
-//			MemberDTO dto1 = new MemberDTO(pw);
-			
-			MemberDAO dao = new MemberDAO();
-//			dao.rank();
-			
+			if(i == 0) {
+				System.out.println("[ranking viewer slot]");
+				/* 같은 논리로 firstview에서 할당된 후 number가 2일시 랭킹보드 진입 전개
+				 * 이 part에서는 랭킹이 보여진 후 mainGame 전개로 돌아오는 method 구현이 되어야 함
+				 * 현재 필요한 method는 아래 목록과 같음
+				 * ranking reader board method add
+				 * Main Game load method add */								
+				MemberDAO dao = new MemberDAO();
 			int cnt = dao.rank();
-			if(cnt>0) {
-				System.out.println("랭킹조회");
-			} else {
-				System.out.println();
 			}
-		}
+			}
+			}
+		
 			
-		}
-
-
-
+		
 	@Override
 	public void numberOf3() {
 
