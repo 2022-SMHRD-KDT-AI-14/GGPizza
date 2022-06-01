@@ -148,7 +148,7 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 			break;
 
 		}
-		
+			
 		number = 0;
 
 	}

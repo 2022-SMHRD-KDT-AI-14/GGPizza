@@ -334,7 +334,7 @@ public void select() {
             System.out.printf("%25s","[Nickname]");            
             System.out.printf("%20s","[Money]");
             System.out.println();
-			
+				
 			while (rs.next()) {
 //				String pw = rs.getString(1);
 //				System.out.printf("\n" + pw);
