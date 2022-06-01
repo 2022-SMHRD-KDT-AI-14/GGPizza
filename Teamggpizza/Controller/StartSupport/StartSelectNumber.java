@@ -7,7 +7,7 @@ import java.util.Scanner;
 import Story.Manual;
 import UI.Numbers;
 
-
+	
 public class StartSelectNumber extends StartingSub implements Numbers {
 	
 	MemberDAO dao = new MemberDAO();
