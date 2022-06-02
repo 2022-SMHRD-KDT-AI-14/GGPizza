@@ -44,7 +44,6 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 					dao.login(dto);
 					accountSet();
 					break;
-
 				}
 
 				if (number1 == 2) {
@@ -63,6 +62,7 @@ public class StartSelectNumber extends StartingSub implements Numbers {
 					if (cnt > 0) {
 						System.out.println("회원가입 성공");
 						 numberOf1();
+						 break;
 					} else {
 						System.out.println("아이디가 중복되어 회원가입에 실패하였습니다.");
 						System.out.println("다시 회원가입 하세요.");
