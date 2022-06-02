@@ -93,7 +93,7 @@ public class Assembly extends StartingSub implements Tutorial {
 
 			// 본 게임 시작
 			rdQuest.rdQuestNum(); // 랜덤 질문 List method
-
+			
 			if (cnt == 0 || cnt == 5 || cnt == 10 || cnt == 15 || cnt == 20 || cnt == 25) {
 				System.out.println("[ Day " + (day + 1) + " ★ 시작! ]");
 			} // 게임시작시 day 표시
