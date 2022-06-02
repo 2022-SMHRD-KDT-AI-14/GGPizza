@@ -13,12 +13,8 @@ public class AwCheck extends AnswerMatching {
 						if (ans.answer.get(i).equals("소스")) {
 							money += 3000;
 							awReactionCheck = 1;
-						} else {
-							life += 1;
 						}
 					}
-				} else {
-					life += 1;
 				}
 			}
 		} // 0~2 end
@@ -31,12 +27,8 @@ public class AwCheck extends AnswerMatching {
 					if (ans.answer.get(i).equals("치즈")) {
 						money += 4000;
 						awReactionCheck = 1;
-					} else {
-						life += 1;
 					}
 				}
-			}else {
-				life += 1;
 			}
 		} // 3~6 end
 
@@ -57,12 +49,8 @@ public class AwCheck extends AnswerMatching {
 					if (cnt == ans.answer.size()) { // 정답재료의 수 만큼 카운트
 						money += 7000; // 참이면 매출에 더하기
 						awReactionCheck = 1;
-					} else {
-						life += 1;
 					}
 				}
-			}else {
-				life += 1;
 			}
 		} // 7~14 end
 
@@ -81,13 +69,9 @@ public class AwCheck extends AnswerMatching {
 						if (ans.answer.get(i).equals("페퍼로니")) {
 							money += 6000;
 							awReactionCheck = 1;
-						} else {
-							life += 1;
 						}
 					}
 				}
-			}else {
-				life += 1;
 			} // 15~16 end
 
 			if (17 <= nowLevel && nowLevel <= 20) { // 현재 array Random 할당되는 값에 따라서 nowLevel에 값 할당
@@ -107,12 +91,8 @@ public class AwCheck extends AnswerMatching {
 						if (cnt == ans.answer.size()) { // 정답재료의 수 만큼 카운트
 							money += 9000; // 참이면 매출에 더하기
 							awReactionCheck = 1;
-						} else {
-							life += 1;
 						}
 					}
-				}else {
-					life += 1;
 				}
 			} // 17~20 end
 
@@ -136,12 +116,8 @@ public class AwCheck extends AnswerMatching {
 						if (cnt == ans.answer.size()) { // 정답재료의 수 만큼 카운트
 							money += 13000; // 참이면 매출에 더하기
 							awReactionCheck = 1;
-						} else {
-							life += 1;
 						}
 					}
-				}else {
-					life += 1;
 				}
 			} // 17~20 end
 
@@ -159,12 +135,8 @@ public class AwCheck extends AnswerMatching {
 						if (ans.answer.get(i).equals("피망")) {
 							money += 6000;
 							awReactionCheck = 1;
-						} else {
-							life += 1;
 						}
 					}
-				}else {
-					life += 1;
 				}
 			} // 25~26 end
 
@@ -185,12 +157,8 @@ public class AwCheck extends AnswerMatching {
 						if (cnt == ans.answer.size()) { // 정답재료의 수 만큼 카운트
 							money += 9000; // 참이면 매출에 더하기
 							awReactionCheck = 1;
-						} else {
-							life += 1;
 						}
 					}
-				}else {
-					life += 1;
 				}
 			} // 27 end
 
@@ -214,12 +182,8 @@ public class AwCheck extends AnswerMatching {
 						if (cnt == ans.answer.size()) { // 정답재료의 수 만큼 카운트
 							money += 13000; // 참이면 매출에 더하기
 							awReactionCheck = 1;
-						} else {
-							life += 1;
 						}
 					}
-				}else {
-					life += 1;
 				}
 			} // 28~30 end
 
@@ -243,12 +207,8 @@ public class AwCheck extends AnswerMatching {
 						if (cnt == ans.answer.size()) { // 정답재료의 수 만큼 카운트
 							money += 15000; // 참이면 매출에 더하기
 							awReactionCheck = 1;
-						} else {
-							life += 1;
 						}
 					}
-				}else {
-					life += 1;
 				}
 			} // 31 end
 
@@ -275,12 +235,8 @@ public class AwCheck extends AnswerMatching {
 						if (cnt == ans.answer.size()) { // 정답재료의 수 만큼 카운트
 							money += 19000; // 참이면 매출에 더하기
 							awReactionCheck = 1;
-						} else {
-							life += 1;
 						}
 					}
-				}else {
-					life += 1;
 				}
 			} // 32~34 end
 
@@ -298,12 +254,8 @@ public class AwCheck extends AnswerMatching {
 						if (ans.answer.get(i).equals("소시지")) {
 							money += 6500;
 							awReactionCheck = 1;
-						} else {
-							life += 1;
-						}
+						
 					}
-				}else {
-					life += 1;
 				}
 			} // 35 end
 
@@ -324,12 +276,8 @@ public class AwCheck extends AnswerMatching {
 						if (cnt == ans.answer.size()) { // 정답재료의 수 만큼 카운트
 							money += 9500; // 참이면 매출에 더하기
 							awReactionCheck = 1;
-						} else {
-							life += 1;
 						}
 					}
-				}else {
-					life += 1;
 				}
 			} // 36 end
 
@@ -353,12 +301,8 @@ public class AwCheck extends AnswerMatching {
 						if (cnt == ans.answer.size()) { // 정답재료의 수 만큼 카운트
 							money += 13500; // 참이면 매출에 더하기
 							awReactionCheck = 1;
-						} else {
-							life += 1;
 						}
 					}
-				}else {
-					life += 1;
 				}
 			} // 37~38 end
 
@@ -379,12 +323,8 @@ public class AwCheck extends AnswerMatching {
 						if (cnt == ans.answer.size()) { // 정답재료의 수 만큼 카운트
 							money += 12500; // 참이면 매출에 더하기
 							awReactionCheck = 1;
-						} else {
-							life += 1;
 						}
 					}
-				}else {
-					life += 1;
 				}
 			} // 39 end
 
@@ -408,12 +348,8 @@ public class AwCheck extends AnswerMatching {
 						if (cnt == ans.answer.size()) { // 정답재료의 수 만큼 카운트
 							money += 15500; // 참이면 매출에 더하기
 							awReactionCheck = 1;
-						} else {
-							life += 1;
 						}
 					}
-				}else {
-					life += 1;
 				}
 			} // 40 end
 
@@ -437,12 +373,8 @@ public class AwCheck extends AnswerMatching {
 						if (cnt == ans.answer.size()) { // 정답재료의 수 만큼 카운트
 							money += 15500; // 참이면 매출에 더하기
 							awReactionCheck = 1;
-						} else {
-							life += 1;
 						}
 					}
-				}else {
-					life += 1;
 				}
 			} // 41 end
 
@@ -469,12 +401,8 @@ public class AwCheck extends AnswerMatching {
 						if (cnt == ans.answer.size()) { // 정답재료의 수 만큼 카운트
 							money += 19500; // 참이면 매출에 더하기
 							awReactionCheck = 1;
-						} else {
-							life += 1;
 						}
 					}
-				}else {
-					life += 1;
 				}
 			} // 42~43 end
 
@@ -501,15 +429,12 @@ public class AwCheck extends AnswerMatching {
 						if (cnt == ans.answer.size()) { // 정답재료의 수 만큼 카운트
 							money += 19500; // 참이면 매출에 더하기
 							awReactionCheck = 1;
-						} else {
-							life += 1;
 						}
 					}
-				}else {
-					life += 1;
 				}
 			} // 44~46 end
 
+			}
 		}
 	}
 
@@ -524,12 +449,8 @@ public class AwCheck extends AnswerMatching {
 						if (ans.answer.get(i).equals("버섯")) {
 							money += 7500;
 							awReactionCheck = 1;
-						} else {
-							life += 1;
 						}
 					}
-				}else {
-					life += 1;
 				}
 			} // 47 end
 
@@ -550,12 +471,8 @@ public class AwCheck extends AnswerMatching {
 						if (cnt == ans.answer.size()) { // 정답재료의 수 만큼 카운트
 							money += 10500; // 참이면 매출에 더하기
 							awReactionCheck = 1;
-						} else {
-							life += 1;
 						}
 					}
-				}else {
-					life += 1;
 				}
 			} // 48 end
 
@@ -579,12 +496,8 @@ public class AwCheck extends AnswerMatching {
 						if (cnt == ans.answer.size()) { // 정답재료의 수 만큼 카운트
 							money += 14500; // 참이면 매출에 더하기
 							awReactionCheck = 1;
-						} else {
-							life += 1;
 						}
 					}
-				}else {
-					life += 1;
 				}
 			} // 49~50 end
 
@@ -608,12 +521,8 @@ public class AwCheck extends AnswerMatching {
 						if (cnt == ans.answer.size()) { // 정답재료의 수 만큼 카운트
 							money += 16500; // 참이면 매출에 더하기
 							awReactionCheck = 1;
-						} else {
-							life += 1;
 						}
 					}
-				}else {
-					life += 1;
 				}
 			} // 51 end
 
@@ -637,12 +546,8 @@ public class AwCheck extends AnswerMatching {
 						if (cnt == ans.answer.size()) { // 정답재료의 수 만큼 카운트
 							money += 16500; // 참이면 매출에 더하기
 							awReactionCheck = 1;
-						} else {
-							life += 1;
 						}
 					}
-				}else {
-					life += 1;
 				}
 			} // 52 end
 
@@ -666,12 +571,8 @@ public class AwCheck extends AnswerMatching {
 						if (cnt == ans.answer.size()) { // 정답재료의 수 만큼 카운트
 							money += 17000; // 참이면 매출에 더하기
 							awReactionCheck = 1;
-						} else {
-							life += 1;
 						}
 					}
-				}else {
-					life += 1;
 				}
 			} // 53 end
 
@@ -698,12 +599,8 @@ public class AwCheck extends AnswerMatching {
 						if (cnt == ans.answer.size()) { // 정답재료의 수 만큼 카운트
 							money += 20500; // 참이면 매출에 더하기
 							awReactionCheck = 1;
-						} else {
-							life += 1;
 						}
 					}
-				}else {
-					life += 1;
 				}
 			} // 54~56 end
 
@@ -730,12 +627,8 @@ public class AwCheck extends AnswerMatching {
 						if (cnt == ans.answer.size()) { // 정답재료의 수 만큼 카운트
 							money += 20500; // 참이면 매출에 더하기
 							awReactionCheck = 1;
-						} else {
-							life += 1;
 						}
 					}
-				}else {
-					life += 1;
 				}
 			} // 57~58 end
 
@@ -762,12 +655,8 @@ public class AwCheck extends AnswerMatching {
 						if (cnt == ans.answer.size()) { // 정답재료의 수 만큼 카운트
 							money += 21000; // 참이면 매출에 더하기
 							awReactionCheck = 1;
-						} else {
-							life += 1;
 						}
 					}
-				}else {
-					life += 1;
 				}
 			} // 59~60 end
 
@@ -800,12 +689,8 @@ public class AwCheck extends AnswerMatching {
 						if (cnt == ans.answer.size()) { // 정답재료의 수 만큼 카운트
 							money += 33000; // 참이면 매출에 더하기
 							awReactionCheck = 1;
-						} else {
-							life += 1;
 						}
 					}
-				}else {
-					life += 1;
 				}
 			} // 61 end
 
