@@ -204,6 +204,8 @@ public void select() {
 					System.out.println("로그인 성공");
 				}else {
 					System.out.println("로그인 실패");
+					StartSelectNumber ssn = new StartSelectNumber();
+					ssn.numberOf1();
 				}
 			}
 	
