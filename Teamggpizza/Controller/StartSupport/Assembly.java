@@ -8,7 +8,10 @@ import AnswerLogic.AnswerMatching;
 import AnswerLogic.AwCheck;
 import GuestReactionLogic.AwReactionCheck;
 import GuestReactionLogic.RandomReaction;
+import Image.RandomReactionImage;
+import Image.Reaction;
 import Image.pizzaImage;
+import Image.rdReactionImgMatching;
 import QuestionLogic.RandomQuestion;
 import Reaction.GuestReaction;
 import Story.Day1_Question;
@@ -100,6 +103,10 @@ public class Assembly extends StartingSub implements Tutorial {
 		AwReactionCheck arc = new AwReactionCheck();
 		pizzaImage pizzaimage = new pizzaImage();
 
+		Reaction reaction = new Reaction();
+		rdReactionImgMatching rdractionimgmaching = new rdReactionImgMatching();
+		RandomReactionImage rdreactionimg = new RandomReactionImage();
+		
 		level += 1;
 
 		while (cnt != 25 && life != 3) {
@@ -134,8 +141,10 @@ public class Assembly extends StartingSub implements Tutorial {
 
 			// 반응 출력
 			System.out.println("★☆★ 띠로리띠로리 ▶ 주문하신 피자 나왔습니다! ★☆★");
-			System.out.print("손님 : ");
-
+			System.out.println("손님 : ");
+			
+			rdreactionimg.reRactionImgNum(); // 랜덤 반응 이미지 List nmethod
+			arc.reactionimgCheck(); // 이모지 반응 출력 메소드
 			rdReaction.rdReactionNum(); // 랜덤 반응 List method
 			arc.reactionCheck(); // 반응 출력 매소드
 
@@ -168,7 +177,7 @@ public class Assembly extends StartingSub implements Tutorial {
 
 			ans.answer.clear();
 			System.out.println();
-			System.out.println("Cnt view Test : " + cnt);
+			//System.out.println("Cnt view Test : " + cnt);
 			System.out.println();
 
 		}

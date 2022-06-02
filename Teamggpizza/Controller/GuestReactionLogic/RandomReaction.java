@@ -12,7 +12,6 @@ public class RandomReaction extends StartingSub {
 	public int rdReactionNum() {
 		GuestReaction reactionList = new GuestReaction();
 		reactionList.goodbadAw();
-		reactionList.goodbadAw();
 		Random rd = new Random();
 
 		if (awReactionCheck == 1) { // goodReaction

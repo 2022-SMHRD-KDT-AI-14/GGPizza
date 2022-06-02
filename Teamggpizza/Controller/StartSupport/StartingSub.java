@@ -21,7 +21,7 @@ public class StartingSub {
 
 	public static int awReactionCheck;
 	public static int nowReaction;
-	
+	public static int nowrdReactionImg;
 
 	}
 
