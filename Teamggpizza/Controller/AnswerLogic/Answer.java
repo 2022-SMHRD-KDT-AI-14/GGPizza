@@ -16,29 +16,29 @@ public class Answer extends StartingSub {
 
 	char sub = '"';
 	int answerSelect;
-	int a; // while ¸ØÃß´Â ¿ëµµ·Î °ª ÇÒ´çÇÏ´Â int
+	int a; // while ë©ˆì¶”ëŠ” ìš©ë„ë¡œ ê°’ í• ë‹¹í•˜ëŠ” int
 
 	public void answerScanner() {
-		System.out.println("¡Ú¡Ù¡Ú ÁÖ¹® ¡Ú¡Ù¡Ú");
-		System.out.println("¼Õ´Ô : " + sub + Day1_Question.orderList.get(nowLevel) + sub);
+		System.out.println("â˜…â˜†â˜… ì£¼ë¬¸ â˜…â˜†â˜…");
+		System.out.println("ì†ë‹˜ : " + sub + Day1_Question.orderList.get(nowLevel) + sub);
 		System.out.println();
-		System.out.println("<<< ÇÇÀÚ¸¦ ¸¸µé¾îº¸ÀÚ! >>>");
-		System.out.println("[¡ÚTip¡Ú] Ãß°¡ÇÒ ÅäÇÎÀÌ ¾ø´Ù¸é " + sub + "¿Ï¼º" + sub + "ÀÌ¶ó°í ÀÔ·ÂÇÏ¼¼¿ä.");
+		System.out.println("<<< í”¼ìë¥¼ ë§Œë“¤ì–´ë³´ì! >>>");
+		System.out.println("[â˜…Tipâ˜…] ì¶”ê°€í•  í† í•‘ì´ ì—†ë‹¤ë©´ " + sub + "ì™„ì„±" + sub + "ì´ë¼ê³  ì…ë ¥í•˜ì„¸ìš”.");
 
 		System.out.println();
-		System.out.print("¹İÁ×À» Æì°í ´ÙÀ½ ÅäÇÎÀº? : ");
-		answer.add(sc.next()); // ÅäÇÎÀ» Ãß°¡ÇÒ ¶§¸¶´Ù answer array¿¡ ÇÒ´ç
+		System.out.print("ë°˜ì£½ì„ í´ê³  ë‹¤ìŒ í† í•‘ì€? : ");
+		answer.add(sc.next()); // í† í•‘ì„ ì¶”ê°€í•  ë•Œë§ˆë‹¤ answer arrayì— í• ë‹¹
 
 		while (a != 1) {
 
-			System.out.print("Ãß°¡ÇÒ ÅäÇÎÀº? : ");
+			System.out.print("ì¶”ê°€í•  í† í•‘ì€? : ");
 			answer.add(sc.next());
-			// ¹İº¹ÀûÀ¸·Î Ãß°¡ ÇÒ´çÇÏ°í "¿Ï¼º"ÀÌ ³ª¿À¸é a¿¡ +1, while Á¾·á
+			// ë°˜ë³µì ìœ¼ë¡œ ì¶”ê°€ í• ë‹¹í•˜ê³  "ì™„ì„±"ì´ ë‚˜ì˜¤ë©´ aì— +1, while ì¢…ë£Œ
 
 			for (int i = 0; i < answer.size(); i++) {
 
-				if (answer.get(i).equals("¿Ï¼º")) {
-					answer.remove("¿Ï¼º"); // ¿Ï·á¶ó´Â ¹®ÀÚÀÇ ¹è¿­À» Áö¿öÁÜ
+				if (answer.get(i).equals("ì™„ì„±")) {
+					answer.remove("ì™„ì„±"); // ì™„ë£Œë¼ëŠ” ë¬¸ìì˜ ë°°ì—´ì„ ì§€ì›Œì¤Œ
 					a += 1;
 
 				}

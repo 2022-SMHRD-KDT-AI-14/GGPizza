@@ -1,6 +1,7 @@
+=\=\=\=\=\=\=
+<<<<<<<=HEAD
+>>>>>>>=branch 'master' of https\://github.com/2022-SMHRD-KDT-AI-14/GGPizza.git
 eclipse.preferences.version=1
-<<<<<<< HEAD
-encoding//View/Image/Reaction.java=UTF-8
-=======
+encoding//Controller/AnswerLogic/Answer.java=UTF-8
 encoding//Controller/StartSupport/Assembly.java=UTF-8
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-KDT-AI-14/GGPizza.git
+encoding//View/Image/Reaction.java=UTF-8

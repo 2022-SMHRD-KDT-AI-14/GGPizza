@@ -196,13 +196,11 @@ public class Reaction {
 				+ "    　 U￣U￣￣￣U￣￣U"); // 17
 		
 		guestEmotionList.add(
-				  "╭┈┈┈┈╯   ╰┈┈┈╮\r\n"
-				+ " ╰┳┳╯    ╰┳┳╯\r\n"
-				+ "  N 　     N\r\n"
-				+ " ○          ○\r\n"
-				+ "     ╰┈┈╯\r\n"
-				+ "  O ╭━━━━━╮　 O\r\n"
-				+ "      ┈┈┈┈\r\n"); // 18
+				    " ∧＿∧\r\n"
+				  + "(　･ω･)＝つ≡つ\r\n"
+				  + "(っ　≡つ＝つ\r\n"
+				  + "(　　　) 맘에 안들어!\r\n"
+				  + "//￣//"); // 18
 		
 		guestEmotionList.add(
 				  "████▌▄▌▄▐▐▌█████\r\n"
