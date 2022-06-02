@@ -157,6 +157,11 @@ public class Assembly extends StartingSub implements Tutorial {
 
 				System.out.println();
 				System.out.println("===============================================================");
+				System.out.println(
+						    "+*.｡ﾟ ･*･:*:｡*+。*｡:ﾟ+\r\n"
+						  + "＼＼ヽ  ٩( 'ω' )و   /／／\r\n"
+						  + "  （￣￣￣￣￣￣￣￣￣￣）\r\n"
+						  + "  （￣￣￣￣￣￣￣￣￣￣）\r\n");
 				System.out.println("제임스 고슬링씨 : " + talkSub + "고생했다. 퇴근할 시간이다!" + talkSub);
 				System.out.println(name + " : " + talkSub + "오예~ 칼퇴하자!!!" + talkSub);
 				System.out.println("===============================================================");
