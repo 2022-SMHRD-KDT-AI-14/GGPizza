@@ -105,8 +105,7 @@ public class Assembly extends StartingSub implements Tutorial {
 
 		while (cnt != 25 && life != 3) {
 
-			// 본 게임 시작
-			rdQuest.rdQuestNum(); // 랜덤 질문 List method
+			
 			
 			switch (cnt){
 			case 0 : 
@@ -135,6 +134,8 @@ public class Assembly extends StartingSub implements Tutorial {
 				System.out.println("[ Day " + (day + 1) + " ★ 시작! ]");
 			} // 게임시작시 day 표시
 
+			// 본 게임 시작
+			rdQuest.rdQuestNum(); // 랜덤 질문 List method
 			ans.answerScanner(); // 질문에 대한 토핑 답하는 method
 			ach.levels(); // 정답 매칭 시스템
 
@@ -178,12 +179,13 @@ public class Assembly extends StartingSub implements Tutorial {
 
 		}
 
+
 		if (life == 3) {
-
+			
 			end.ending();
-
+			
 		}
-
+		
 		System.out.println();
 		System.out.println("test money value : " + money);
 		MemberDAO dao = new MemberDAO();
