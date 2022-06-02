@@ -33,9 +33,9 @@ public void select() {
 		}
 		
 		//2. DB 연결
-		String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
-		String db_id = "hr";
-		String db_pw = "hr";
+		String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe";
+		String db_id = "campus_e_0516_5";
+		String db_pw = "smhrd5";
 		
 		try {
 			conn = DriverManager.getConnection(url, db_id, db_pw);
@@ -108,9 +108,9 @@ public void select() {
 			
 		// 2. DB 연결
 		
-		String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
-		String db_id = "hr";
-		String db_pw = "hr";
+		String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe";
+		String db_id = "campus_e_0516_5";
+		String db_pw = "smhrd5";
 		
 		try {
 			conn = DriverManager.getConnection(url, db_id, db_pw);
