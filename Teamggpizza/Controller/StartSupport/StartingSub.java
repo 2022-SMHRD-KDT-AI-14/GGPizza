@@ -10,7 +10,7 @@ public class StartingSub {
 	    // Score, turn 역시 이 곳에 public static으로 선언
 	
 	
-	
+//	MemberDTO dto = new MemberDTO(null, null);
 	
 		public static int number;
 		public static int level;
@@ -20,7 +20,7 @@ public class StartingSub {
 		public static int nowLevel;
 		public static int money;
 		public static String name;
-		name = dto.getname();
+//		name = dto.getname();
 		
 		
 		public static int awReactionCheck;
