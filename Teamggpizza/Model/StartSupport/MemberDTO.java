@@ -43,13 +43,11 @@ public class MemberDTO extends StartingSub{
 	public void setPw(String pw) {
 		this.pw = pw;
 	}
-	public int getMoney(int money1) {
+	public int getMoney() {
 		return money1;
 	}
 
-	public void setMoney(int money1) {
-		this.money1 = money1;
-	}
+
 	
 	
 
