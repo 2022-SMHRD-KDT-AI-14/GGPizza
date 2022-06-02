@@ -17,50 +17,58 @@ public class AwCheck extends AnswerMatching {
 							life += 1;
 						}
 					}
+				} else {
+					life += 1;
 				}
-			} // 0~2 end
+			}
+		} // 0~2 end
 
-			if (3 <= nowLevel && nowLevel <= 6) { // 현재 array Random 할당되는 값에 따라서 nowLevel에 값 할당
-				if (ans.answer.size() == 1) { // 배열의 크기제한
-					for (int i = 0; i < ans.answer.size(); i++) {
-						// 토핑추가에 답한 만큼 비교해서 아래 답과 일치하면 money 추가
-						// 추가로 비교할 토핑 많아지면 if로 다중 처리
-						if (ans.answer.get(i).equals("치즈")) {
-							money += 4000;
-							awReactionCheck = 1;
-						} else {
-							life += 1;
-						}
+		if (3 <= nowLevel && nowLevel <= 6) { // 현재 array Random 할당되는 값에 따라서 nowLevel에 값 할당
+			if (ans.answer.size() == 1) { // 배열의 크기제한
+				for (int i = 0; i < ans.answer.size(); i++) {
+					// 토핑추가에 답한 만큼 비교해서 아래 답과 일치하면 money 추가
+					// 추가로 비교할 토핑 많아지면 if로 다중 처리
+					if (ans.answer.get(i).equals("치즈")) {
+						money += 4000;
+						awReactionCheck = 1;
+					} else {
+						life += 1;
 					}
 				}
-			} // 3~6 end
+			}else {
+				life += 1;
+			}
+		} // 3~6 end
 
-			if (7 <= nowLevel && nowLevel <= 14) { // 현재 array Random 할당되는 값에 따라서 nowLevel에 값 할당
-				if (ans.answer.size() == 2) { // 배열의 크기제한
-					int cnt = 0; // 정답재료의 수 만큼 카운트 초기화
-					for (int i = 0; i < ans.answer.size(); i++) {
-						// 토핑추가에 답한 만큼 비교해서 아래 답과 일치하면 money 추가
-						// 추가로 비교할 토핑 많아지면 if-else나 &&로 다중 처리
-						switch (ans.answer.get(i)) {
-						case "소스":
-							cnt++;
-							break;
-						case "치즈":
-							cnt++;
-							break;
-						}
-						if (cnt == ans.answer.size()) { // 정답재료의 수 만큼 카운트
-							money += 7000; // 참이면 매출에 더하기
-							awReactionCheck = 1;
-						} else {
-							life += 1;
-						}
+		if (7 <= nowLevel && nowLevel <= 14) { // 현재 array Random 할당되는 값에 따라서 nowLevel에 값 할당
+			if (ans.answer.size() == 2) { // 배열의 크기제한
+				int cnt = 0; // 정답재료의 수 만큼 카운트 초기화
+				for (int i = 0; i < ans.answer.size(); i++) {
+					// 토핑추가에 답한 만큼 비교해서 아래 답과 일치하면 money 추가
+					// 추가로 비교할 토핑 많아지면 if-else나 &&로 다중 처리
+					switch (ans.answer.get(i)) {
+					case "소스":
+						cnt++;
+						break;
+					case "치즈":
+						cnt++;
+						break;
+					}
+					if (cnt == ans.answer.size()) { // 정답재료의 수 만큼 카운트
+						money += 7000; // 참이면 매출에 더하기
+						awReactionCheck = 1;
+					} else {
+						life += 1;
 					}
 				}
-			} // 7~14 end
+			}else {
+				life += 1;
+			}
+		} // 7~14 end
 
-		}
 	}
+
+	
 
 	public void Level2() {
 		if (level == 2) { // level은 StartingSub stack에 저장되어 있음
@@ -77,6 +85,8 @@ public class AwCheck extends AnswerMatching {
 						}
 					}
 				}
+			}else {
+				life += 1;
 			} // 15~16 end
 
 			if (17 <= nowLevel && nowLevel <= 20) { // 현재 array Random 할당되는 값에 따라서 nowLevel에 값 할당
@@ -99,6 +109,8 @@ public class AwCheck extends AnswerMatching {
 							life += 1;
 						}
 					}
+				}else {
+					life += 1;
 				}
 			} // 17~20 end
 
@@ -125,6 +137,8 @@ public class AwCheck extends AnswerMatching {
 							life += 1;
 						}
 					}
+				}else {
+					life += 1;
 				}
 			} // 17~20 end
 
@@ -145,6 +159,8 @@ public class AwCheck extends AnswerMatching {
 							life += 1;
 						}
 					}
+				}else {
+					life += 1;
 				}
 			} // 25~26 end
 
@@ -168,6 +184,8 @@ public class AwCheck extends AnswerMatching {
 							life += 1;
 						}
 					}
+				}else {
+					life += 1;
 				}
 			} // 27 end
 
@@ -194,6 +212,8 @@ public class AwCheck extends AnswerMatching {
 							life += 1;
 						}
 					}
+				}else {
+					life += 1;
 				}
 			} // 28~30 end
 
@@ -220,6 +240,8 @@ public class AwCheck extends AnswerMatching {
 							life += 1;
 						}
 					}
+				}else {
+					life += 1;
 				}
 			} // 31 end
 
@@ -249,6 +271,8 @@ public class AwCheck extends AnswerMatching {
 							life += 1;
 						}
 					}
+				}else {
+					life += 1;
 				}
 			} // 32~34 end
 
@@ -269,6 +293,8 @@ public class AwCheck extends AnswerMatching {
 							life += 1;
 						}
 					}
+				}else {
+					life += 1;
 				}
 			} // 35 end
 
@@ -292,6 +318,8 @@ public class AwCheck extends AnswerMatching {
 							life += 1;
 						}
 					}
+				}else {
+					life += 1;
 				}
 			} // 36 end
 
@@ -318,6 +346,8 @@ public class AwCheck extends AnswerMatching {
 							life += 1;
 						}
 					}
+				}else {
+					life += 1;
 				}
 			} // 37~38 end
 
@@ -341,6 +371,8 @@ public class AwCheck extends AnswerMatching {
 							life += 1;
 						}
 					}
+				}else {
+					life += 1;
 				}
 			} // 39 end
 
@@ -367,6 +399,8 @@ public class AwCheck extends AnswerMatching {
 							life += 1;
 						}
 					}
+				}else {
+					life += 1;
 				}
 			} // 40 end
 
@@ -393,6 +427,8 @@ public class AwCheck extends AnswerMatching {
 							life += 1;
 						}
 					}
+				}else {
+					life += 1;
 				}
 			} // 41 end
 
@@ -422,6 +458,8 @@ public class AwCheck extends AnswerMatching {
 							life += 1;
 						}
 					}
+				}else {
+					life += 1;
 				}
 			} // 42~43 end
 
@@ -451,6 +489,8 @@ public class AwCheck extends AnswerMatching {
 							life += 1;
 						}
 					}
+				}else {
+					life += 1;
 				}
 			} // 44~46 end
 
@@ -471,6 +511,8 @@ public class AwCheck extends AnswerMatching {
 							life += 1;
 						}
 					}
+				}else {
+					life += 1;
 				}
 			} // 47 end
 
@@ -494,6 +536,8 @@ public class AwCheck extends AnswerMatching {
 							life += 1;
 						}
 					}
+				}else {
+					life += 1;
 				}
 			} // 48 end
 
@@ -520,6 +564,8 @@ public class AwCheck extends AnswerMatching {
 							life += 1;
 						}
 					}
+				}else {
+					life += 1;
 				}
 			} // 49~50 end
 
@@ -546,6 +592,8 @@ public class AwCheck extends AnswerMatching {
 							life += 1;
 						}
 					}
+				}else {
+					life += 1;
 				}
 			} // 51 end
 
@@ -572,6 +620,8 @@ public class AwCheck extends AnswerMatching {
 							life += 1;
 						}
 					}
+				}else {
+					life += 1;
 				}
 			} // 52 end
 
@@ -598,6 +648,8 @@ public class AwCheck extends AnswerMatching {
 							life += 1;
 						}
 					}
+				}else {
+					life += 1;
 				}
 			} // 53 end
 
@@ -627,6 +679,8 @@ public class AwCheck extends AnswerMatching {
 							life += 1;
 						}
 					}
+				}else {
+					life += 1;
 				}
 			} // 54~56 end
 
@@ -656,6 +710,8 @@ public class AwCheck extends AnswerMatching {
 							life += 1;
 						}
 					}
+				}else {
+					life += 1;
 				}
 			} // 57~58 end
 
@@ -685,6 +741,8 @@ public class AwCheck extends AnswerMatching {
 							life += 1;
 						}
 					}
+				}else {
+					life += 1;
 				}
 			} // 59~60 end
 
@@ -720,6 +778,8 @@ public class AwCheck extends AnswerMatching {
 							life += 1;
 						}
 					}
+				}else {
+					life += 1;
 				}
 			} // 61 end
 
