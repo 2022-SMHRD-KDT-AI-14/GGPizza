@@ -4,12 +4,16 @@ public class MemberDTO extends StartingSub{
 
 	private String id, pw, name;
 	private int money1;
+	String name1;
 
 
 	public MemberDTO(String id, String pw){
 		super();
 		this.id = id;
 		this.pw = pw;
+		getName();
+		name1 = StartingSub.name;
+		
 	}
 
 	public MemberDTO(String id, String pw, String name, int money1) {
@@ -18,9 +22,12 @@ public class MemberDTO extends StartingSub{
 		this.pw = pw;
 		this.name = name;
 		this.money1 = money1;
+		StartingSub.name = this.name;
+		name1 = StartingSub.name;
 	}
 
 	public String getName() {
+		name = name1;
 		return name;
 	}
 
@@ -43,13 +50,11 @@ public class MemberDTO extends StartingSub{
 	public void setPw(String pw) {
 		this.pw = pw;
 	}
-	public int getMoney(int money1) {
+	public int getMoney() {
 		return money1;
 	}
 
-	public void setMoney(int money1) {
-		this.money1 = money1;
-	}
+
 	
 	
 

@@ -7,7 +7,7 @@ public class Reaction implements Aski {
 	@Override
 	public void image() {
 
-		
+		// d
 		
 	}
 

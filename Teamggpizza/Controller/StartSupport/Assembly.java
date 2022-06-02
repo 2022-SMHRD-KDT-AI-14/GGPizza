@@ -1,5 +1,6 @@
 package StartSupport;
 
+import java.sql.DriverManager;
 import java.util.Scanner;
 
 import AnswerLogic.Answer;
@@ -12,8 +13,18 @@ import Reaction.GuestReaction;
 import Story.Day1_Question;
 import Story.Manual;
 import UI.Tutorial;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class Assembly extends StartingSub implements Tutorial {
+
+	MemberDTO dto = new MemberDTO(null, null);
+	Connection conn;
+	PreparedStatement psmt;
+	ResultSet rs;
 
 	// 각 챕터별 세부적으로 method를 조합하는 class 입니다.
 
@@ -31,6 +42,7 @@ public class Assembly extends StartingSub implements Tutorial {
 		AnswerMatching ansMat = new AnswerMatching();
 		AwCheck ach = new AwCheck();
 		Scanner sc = new Scanner(System.in);
+
 
 		manual.tutorial();
 		manual.manual();
@@ -140,15 +152,18 @@ public class Assembly extends StartingSub implements Tutorial {
 			System.out.println();
 
 		}
-		
-		if(life==3) {
-			
+
+		if (life == 3) {
+
 			end.ending();
-			
+
 		}
 
 		System.out.println();
 		System.out.println("test money value : " + money);
+		MemberDAO dao = new MemberDAO();
+
+		dao.updateMoney(money, enter);
 		// money에 잘 담아지는지 확인하는 용도의 print
 
 	}
