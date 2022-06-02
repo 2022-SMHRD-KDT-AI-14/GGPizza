@@ -105,8 +105,6 @@ public class Assembly extends StartingSub implements Tutorial {
 
 		while (cnt != 25 && life != 3) {
 
-			
-			
 			switch (cnt){
 			case 0 : 
 				pizzaimage.toppingImg1();
@@ -130,6 +128,7 @@ public class Assembly extends StartingSub implements Tutorial {
 			} // 게임시작시 day 표시
 
 			// 본 게임 시작
+			awReactionCheck = 0;
 			rdQuest.rdQuestNum(); // 랜덤 질문 List method
 			ans.answerScanner(); // 질문에 대한 토핑 답하는 method
 			ach.levels(); // 정답 매칭 시스템
@@ -137,6 +136,7 @@ public class Assembly extends StartingSub implements Tutorial {
 			// 반응 출력
 			System.out.println("★☆★ 띠로리띠로리 ▶ 주문하신 피자 나왔습니다! ★☆★");
 			System.out.print("손님 : ");
+			
 			rdReaction.rdReactionNum(); // 랜덤 반응 List method
 			arc.reactionCheck(); // 반응 출력 매소드
 

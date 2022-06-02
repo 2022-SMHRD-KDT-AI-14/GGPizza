@@ -13,6 +13,7 @@ public class AwCheck extends AnswerMatching {
 						if (ans.answer.get(i).equals("소스")) {
 							money += 3000;
 							awReactionCheck = 1;
+							System.out.println("1번째");
 						}
 					}
 				}
@@ -27,6 +28,7 @@ public class AwCheck extends AnswerMatching {
 					if (ans.answer.get(i).equals("치즈")) {
 						money += 4000;
 						awReactionCheck = 1;
+						System.out.println("2번째");
 					}
 				}
 			}
@@ -49,14 +51,13 @@ public class AwCheck extends AnswerMatching {
 					if (cnt == ans.answer.size()) { // 정답재료의 수 만큼 카운트
 						money += 7000; // 참이면 매출에 더하기
 						awReactionCheck = 1;
+						System.out.println("3번째");
 					}
 				}
 			}
 		} // 7~14 end
 
 	}
-
-	
 
 	public void Level2() {
 		if (level == 2) { // level은 StartingSub stack에 저장되어 있음
@@ -254,7 +255,6 @@ public class AwCheck extends AnswerMatching {
 						if (ans.answer.get(i).equals("소시지")) {
 							money += 6500;
 							awReactionCheck = 1;
-						
 					}
 				}
 			} // 35 end
@@ -698,6 +698,7 @@ public class AwCheck extends AnswerMatching {
 	}
 
 	public void levels() {
+		//awReactionCheck = 0;
 		Level1();
 		Level2();
 		Level3();
