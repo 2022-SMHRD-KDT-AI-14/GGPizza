@@ -112,23 +112,18 @@ public class Assembly extends StartingSub implements Tutorial {
 			case 0 : 
 				pizzaimage.toppingImg1();
 				break;
-				
 			case 5 : 
 				pizzaimage.toppingImg2();
 				break;
-				
 			case 10 : 
 				pizzaimage.toppingImg3();
 				break;
-				
 			case 15 : 
 				pizzaimage.toppingImg4();
 				break;
-				
 			case 20 : 
 				pizzaimage.toppingImg5();
 				break;
-			
 		}
 			
 			if (cnt == 0 || cnt == 5 || cnt == 10 || cnt == 15 || cnt == 20) {
