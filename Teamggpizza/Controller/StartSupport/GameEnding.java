@@ -1,6 +1,6 @@
 package StartSupport;
 
-public class GameEnding {
+public class GameEnding extends StartingSub {
 
 	public void ending() {
 		
