@@ -17,7 +17,7 @@ public class MemberDTO extends StartingSub{
 		this.id = id;
 		this.pw = pw;
 		this.name = name;
-		this.money1 = money;
+		this.money1 = money1;
 	}
 
 	public String getName() {
