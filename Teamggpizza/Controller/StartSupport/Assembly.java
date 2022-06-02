@@ -8,6 +8,7 @@ import AnswerLogic.AnswerMatching;
 import AnswerLogic.AwCheck;
 import GuestReactionLogic.AwReactionCheck;
 import GuestReactionLogic.RandomReaction;
+import Image.pizzaImage;
 import QuestionLogic.RandomQuestion;
 import Reaction.GuestReaction;
 import Story.Day1_Question;
@@ -98,7 +99,8 @@ public class Assembly extends StartingSub implements Tutorial {
 
 		RandomReaction rdReaction = new RandomReaction();
 		AwReactionCheck arc = new AwReactionCheck();
-
+		pizzaImage pizzaimage = new pizzaImage();
+		
 		level += 1;
 
 		while (cnt != 25 && life != 3) {
@@ -106,7 +108,30 @@ public class Assembly extends StartingSub implements Tutorial {
 			// 본 게임 시작
 			rdQuest.rdQuestNum(); // 랜덤 질문 List method
 			
-			if (cnt == 0 || cnt == 5 || cnt == 10 || cnt == 15 || cnt == 20 || cnt == 25) {
+			switch (cnt){
+			case 0 : 
+				pizzaimage.toppingImg1();
+				break;
+				
+			case 5 : 
+				pizzaimage.toppingImg2();
+				break;
+				
+			case 10 : 
+				pizzaimage.toppingImg3();
+				break;
+				
+			case 15 : 
+				pizzaimage.toppingImg4();
+				break;
+				
+			case 20 : 
+				pizzaimage.toppingImg5();
+				break;
+			
+		}
+			
+			if (cnt == 0 || cnt == 5 || cnt == 10 || cnt == 15 || cnt == 20) {
 				System.out.println("[ Day " + (day + 1) + " ★ 시작! ]");
 			} // 게임시작시 day 표시
 
