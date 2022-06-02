@@ -32,6 +32,7 @@ public class Assembly extends StartingSub implements Tutorial {
 		AwCheck ach = new AwCheck();
 		Scanner sc = new Scanner(System.in);
 		
+		
 		manual.tutorial();
 		manual.manual();
 
