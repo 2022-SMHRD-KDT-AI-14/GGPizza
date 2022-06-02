@@ -11,16 +11,16 @@ public class Manual extends StartingSub {
 
 	char talkSub;
 	String enter;
+	MemberDAO dao = new MemberDAO();
 	
 
 	public void tutorial() {
 
 		Scanner sc = new Scanner(System.in);
-
+		
 		
 		talkSub = '"';
-		// MemberDTO dto = new MemberDTO(name);
-		name  = "사용자이름";
+		// String name = dao.nickname(dto);
 		
 		// Scanner로 name을 받을지 DB로 받을지 결정한 뒤 할당
 		

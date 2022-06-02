@@ -439,9 +439,9 @@ public void select() {
 	}
 
 	
-	public void nickname() {
+	public String nickname(MemberDTO dto) {
 		
-		
+		String result = "";
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 		} catch (ClassNotFoundException e) {
@@ -464,13 +464,14 @@ public void select() {
 			e.printStackTrace();
 		}
 		
-		String sql = "select NICKNAME from member where id = ?";
+		String sql = "select NICKNAME from member where id =?";
 		try {
 			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, dto.getId());
 			rs = psmt.executeQuery();
-			if(rs.next()) {
-			 String result = rs.getString(1);
-			 System.out.print(result);
+			while(rs.next()) {
+			 result = rs.getString("NICKNAME");
+			 
 			}
 			
 		} catch (SQLException e) {
@@ -478,7 +479,7 @@ public void select() {
 			e.printStackTrace();
 		}
 		
-		
+		return result;
 	}
 
 

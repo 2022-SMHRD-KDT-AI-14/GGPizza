@@ -10,3 +10,4 @@ create table member(
 select * from MEMBER;
 
 
+select NICKNAME from member where id = 'kjg'
