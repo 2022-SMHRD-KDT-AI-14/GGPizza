@@ -22,6 +22,7 @@ public class RandomReaction extends StartingSub {
 		} else if (awReactionCheck == 0) { // badReaction
 			rdReaction = rd.nextInt(11)+10; // bad 리엑션 리스트에 있는 인덱스 0~9까지 불러오기
 			reactionList.goodbadAwList.get(rdReaction);
+			life += 1;
 		}
 
 		nowReaction = rdReaction; // 할당 받은 랜덤 번호를 nowReaction에 추가 할당
