@@ -13,6 +13,7 @@ public class StartingSub {
 		public static int level;
 		public static int day;
 		public static int dayCnt;
+		public static int life;
 		public static int nowLevel;
 		public static int money;
 		public static String name;

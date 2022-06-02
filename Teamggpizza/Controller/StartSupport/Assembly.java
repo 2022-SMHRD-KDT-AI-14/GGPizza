@@ -31,8 +31,7 @@ public class Assembly extends StartingSub implements Tutorial {
 		AnswerMatching ansMat = new AnswerMatching();
 		AwCheck ach = new AwCheck();
 		Scanner sc = new Scanner(System.in);
-		
-		
+
 		manual.tutorial();
 		manual.manual();
 
@@ -83,37 +82,38 @@ public class Assembly extends StartingSub implements Tutorial {
 		AnswerMatching ansMat = new AnswerMatching();
 		AwCheck ach = new AwCheck();
 		Scanner sc = new Scanner(System.in);
-		
+		GameEnding end = new GameEnding();
+
 		RandomReaction rdReaction = new RandomReaction();
 		AwReactionCheck arc = new AwReactionCheck();
-		
+
 		level += 1;
 
-		while (cnt != 25) {
+		while (cnt != 25 && life != 3) {
 
 			// 본 게임 시작
 			rdQuest.rdQuestNum(); // 랜덤 질문 List method
-			
-			if (cnt == 0 || cnt == 5 || cnt == 10 || cnt == 15 || cnt == 20 || cnt == 25 ) {
+
+			if (cnt == 0 || cnt == 5 || cnt == 10 || cnt == 15 || cnt == 20 || cnt == 25) {
 				System.out.println("[ Day " + (day + 1) + " ★ 시작! ]");
 			} // 게임시작시 day 표시
-			
+
 			ans.answerScanner(); // 질문에 대한 토핑 답하는 method
 			ach.levels(); // 정답 매칭 시스템
-			
+
 			// 반응 출력
 			System.out.println("★☆★ 띠로리띠로리 ▶ 주문하신 피자 나왔습니다! ★☆★");
 			System.out.print("손님 : ");
 			rdReaction.rdReactionNum(); // 랜덤 반응 List method
 			arc.reactionCheck(); // 반응 출력 매소드
-			
+
 			cnt++;
 			char talkSub = '"';
 			String enter = "";
-			
+
 			if (cnt % 5 == 0) { // 5문제씩 카운트
 				day++;
-				
+
 				System.out.println();
 				System.out.println("===============================================================");
 				System.out.println("제임스 고슬링씨 : " + talkSub + "고생했다. 퇴근할 시간이다!" + talkSub);
@@ -127,7 +127,7 @@ public class Assembly extends StartingSub implements Tutorial {
 				System.out.println();
 				System.out.println("===============================================================");
 
-				if (day < 5) { 
+				if (day < 5) {
 					System.out.print("다음날로 갈까요? " + talkSub + "네" + talkSub + "라고 입력 >> ");
 					enter = sc.next();
 				}
@@ -137,7 +137,14 @@ public class Assembly extends StartingSub implements Tutorial {
 			ans.answer.clear();
 			System.out.println();
 			System.out.println("Cnt view Test : " + cnt);
+			System.out.println();
 
+		}
+		
+		if(life==3) {
+			
+			end.ending();
+			
 		}
 
 		System.out.println();
