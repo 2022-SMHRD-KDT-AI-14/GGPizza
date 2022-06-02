@@ -44,7 +44,6 @@ public class Assembly extends StartingSub implements Tutorial {
 		AwCheck ach = new AwCheck();
 		Scanner sc = new Scanner(System.in);
 
-
 		manual.tutorial();
 		manual.manual();
 
@@ -100,29 +99,29 @@ public class Assembly extends StartingSub implements Tutorial {
 		RandomReaction rdReaction = new RandomReaction();
 		AwReactionCheck arc = new AwReactionCheck();
 		pizzaImage pizzaimage = new pizzaImage();
-		
+
 		level += 1;
 
 		while (cnt != 25 && life != 3) {
 
-			switch (cnt){
-			case 0 : 
+			switch (cnt) {
+			case 0:
 				pizzaimage.toppingImg1();
 				break;
-			case 5 : 
+			case 5:
 				pizzaimage.toppingImg2();
 				break;
-			case 10 : 
+			case 10:
 				pizzaimage.toppingImg3();
 				break;
-			case 15 : 
+			case 15:
 				pizzaimage.toppingImg4();
 				break;
-			case 20 : 
+			case 20:
 				pizzaimage.toppingImg5();
 				break;
-		}
-			
+			}
+
 			if (cnt == 0 || cnt == 5 || cnt == 10 || cnt == 15 || cnt == 20) {
 				System.out.println("[ Day " + (day + 1) + " ★ 시작! ]");
 			} // 게임시작시 day 표시
@@ -136,7 +135,7 @@ public class Assembly extends StartingSub implements Tutorial {
 			// 반응 출력
 			System.out.println("★☆★ 띠로리띠로리 ▶ 주문하신 피자 나왔습니다! ★☆★");
 			System.out.print("손님 : ");
-			
+
 			rdReaction.rdReactionNum(); // 랜덤 반응 List method
 			arc.reactionCheck(); // 반응 출력 매소드
 
@@ -144,7 +143,7 @@ public class Assembly extends StartingSub implements Tutorial {
 			char talkSub = '"';
 			String enter = "";
 
-			if (cnt % 5 == 0) { // 5문제씩 카운트
+			if (cnt % 5 == 0 && life != 3) { // 5문제씩 카운트
 				day++;
 
 				System.out.println();
@@ -174,13 +173,12 @@ public class Assembly extends StartingSub implements Tutorial {
 
 		}
 
-
 		if (life == 3) {
-			
+
 			end.ending();
-			
+
 		}
-		
+
 		System.out.println();
 		System.out.println("test money value : " + money);
 		MemberDAO dao = new MemberDAO();
