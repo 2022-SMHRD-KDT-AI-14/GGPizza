@@ -27,7 +27,7 @@ public class Assembly extends StartingSub implements Tutorial {
 	PreparedStatement psmt;
 	ResultSet rs;
 
-	// °¢ Ã©ÅÍº° ¼¼ºÎÀûÀ¸·Î method¸¦ Á¶ÇÕÇÏ´Â class ÀÔ´Ï´Ù.
+	// ê° ì±•í„°ë³„ ì„¸ë¶€ì ìœ¼ë¡œ methodë¥¼ ì¡°í•©í•˜ëŠ” class ì…ë‹ˆë‹¤.
 
 	int cnt;
 	String enter;
@@ -48,8 +48,8 @@ public class Assembly extends StartingSub implements Tutorial {
 		manual.manual();
 
 		/*
-		 * ¼öÁ¤ÇÏ´Â ºÎºĞµéÀ» À§ÇØ ÆíÀÇ»ó ¸Ş´º¾ó UI¸¸ Á¸ÀçÇÒ »Ó Starting¿¡´Â ÇÒ´çµÇÁö ¾ÊÀ½ tutorial°ú manual Ãâ·ÂÀº
-		 * accountSet method ³» switch¹® case 1¿¡ Á¸ÀçÇÔ
+		 * ìˆ˜ì •í•˜ëŠ” ë¶€ë¶„ë“¤ì„ ìœ„í•´ í¸ì˜ìƒ ë©”ë‰´ì–¼ UIë§Œ ì¡´ì¬í•  ë¿ Startingì—ëŠ” í• ë‹¹ë˜ì§€ ì•ŠìŒ tutorialê³¼ manual ì¶œë ¥ì€
+		 * accountSet method ë‚´ switchë¬¸ case 1ì— ì¡´ì¬í•¨
 		 */
 
 	}
@@ -65,17 +65,17 @@ public class Assembly extends StartingSub implements Tutorial {
 		AnswerMatching ansMat = new AnswerMatching();
 		AwCheck ach = new AwCheck();
 
-		// view¿¡¼­ Ã³À½À¸·Î º¸¿©Áö´Â tutorial part
+		// viewì—ì„œ ì²˜ìŒìœ¼ë¡œ ë³´ì—¬ì§€ëŠ” tutorial part
 
 		tutosc.firstView();
-		// Ã¹ ½ÃÀÛ ¸Ş´º¿Í ½ºÄ³³Ê·Î number¿¡ ¼ö¸¦ ÇÒ´ç
+		// ì²« ì‹œì‘ ë©”ë‰´ì™€ ìŠ¤ìºë„ˆë¡œ numberì— ìˆ˜ë¥¼ í• ë‹¹
 
 		startnum.numberOf1();
 		startnum.numberOf2();
 		startnum.numberOf3();
 		/*
-		 * ½ºÄµ ¹ŞÀº number¿¡ µû¶ó ´Ù¸£°Ô Àü°³µÇ´Â start ±¸°£ ¸ğµÎ startSelectNumber.class ¾È¿¡ ÀÖ´Â method
-		 * ÀÌ¸§¿¡¼­ º¸¿©Áöµí start ºÎºĞ¸¸ ÇÒ´çµÇ°í ÇØ´ç number¿¡ method¸¦ ºÎ¿© ´ÙÀ½ chapter·Î ¿¬°áÇÒ ¿¹Á¤
+		 * ìŠ¤ìº” ë°›ì€ numberì— ë”°ë¼ ë‹¤ë¥´ê²Œ ì „ê°œë˜ëŠ” start êµ¬ê°„ ëª¨ë‘ startSelectNumber.class ì•ˆì— ìˆëŠ” method
+		 * ì´ë¦„ì—ì„œ ë³´ì—¬ì§€ë“¯ start ë¶€ë¶„ë§Œ í• ë‹¹ë˜ê³  í•´ë‹¹ numberì— methodë¥¼ ë¶€ì—¬ ë‹¤ìŒ chapterë¡œ ì—°ê²°í•  ì˜ˆì •
 		 */
 
 		dayList.day1Quest();
@@ -123,44 +123,44 @@ public class Assembly extends StartingSub implements Tutorial {
 			}
 
 			if (cnt == 0 || cnt == 5 || cnt == 10 || cnt == 15 || cnt == 20) {
-				System.out.println("[ Day " + (day + 1) + " ¡Ú ½ÃÀÛ! ]");
-			} // °ÔÀÓ½ÃÀÛ½Ã day Ç¥½Ã
+				System.out.println("[ Day " + (day + 1) + " â˜… ì‹œì‘! ]");
+			} // ê²Œì„ì‹œì‘ì‹œ day í‘œì‹œ
 
-			// º» °ÔÀÓ ½ÃÀÛ
+			// ë³¸ ê²Œì„ ì‹œì‘
 			awReactionCheck = 0;
-			rdQuest.rdQuestNum(); // ·£´ı Áú¹® List method
-			ans.answerScanner(); // Áú¹®¿¡ ´ëÇÑ ÅäÇÎ ´äÇÏ´Â method
-			ach.levels(); // Á¤´ä ¸ÅÄª ½Ã½ºÅÛ
+			rdQuest.rdQuestNum(); // ëœë¤ ì§ˆë¬¸ List method
+			ans.answerScanner(); // ì§ˆë¬¸ì— ëŒ€í•œ í† í•‘ ë‹µí•˜ëŠ” method
+			ach.levels(); // ì •ë‹µ ë§¤ì¹­ ì‹œìŠ¤í…œ
 
-			// ¹İÀÀ Ãâ·Â
-			System.out.println("¡Ú¡Ù¡Ú ¶ì·Î¸®¶ì·Î¸® ¢º ÁÖ¹®ÇÏ½Å ÇÇÀÚ ³ª¿Ô½À´Ï´Ù! ¡Ú¡Ù¡Ú");
-			System.out.print("¼Õ´Ô : ");
+			// ë°˜ì‘ ì¶œë ¥
+			System.out.println("â˜…â˜†â˜… ë ë¡œë¦¬ë ë¡œë¦¬ â–¶ ì£¼ë¬¸í•˜ì‹  í”¼ì ë‚˜ì™”ìŠµë‹ˆë‹¤! â˜…â˜†â˜…");
+			System.out.print("ì†ë‹˜ : ");
 
-			rdReaction.rdReactionNum(); // ·£´ı ¹İÀÀ List method
-			arc.reactionCheck(); // ¹İÀÀ Ãâ·Â ¸Å¼Òµå
+			rdReaction.rdReactionNum(); // ëœë¤ ë°˜ì‘ List method
+			arc.reactionCheck(); // ë°˜ì‘ ì¶œë ¥ ë§¤ì†Œë“œ
 
 			cnt++;
 			char talkSub = '"';
 			String enter = "";
 
-			if (cnt % 5 == 0 && life != 3) { // 5¹®Á¦¾¿ Ä«¿îÆ®
+			if (cnt % 5 == 0 && life != 3) { // 5ë¬¸ì œì”© ì¹´ìš´íŠ¸
 				day++;
 
 				System.out.println();
 				System.out.println("===============================================================");
-				System.out.println("Á¦ÀÓ½º °í½½¸µ¾¾ : " + talkSub + "°í»ıÇß´Ù. Åğ±ÙÇÒ ½Ã°£ÀÌ´Ù!" + talkSub);
-				System.out.println(name + " : " + talkSub + "¿À¿¹~ Ä®ÅğÇÏÀÚ!!!" + talkSub);
+				System.out.println("ì œì„ìŠ¤ ê³ ìŠ¬ë§ì”¨ : " + talkSub + "ê³ ìƒí–ˆë‹¤. í‡´ê·¼í•  ì‹œê°„ì´ë‹¤!" + talkSub);
+				System.out.println(name + " : " + talkSub + "ì˜¤ì˜ˆ~ ì¹¼í‡´í•˜ì!!!" + talkSub);
 				System.out.println("===============================================================");
 				System.out.println();
 
-				System.out.println("[ Day " + day + " ÆÇ¸Å Á¾·á ]");
-				System.out.println("¢º ÀüÃ¼ ¼öÀÍ : " + money + "¿ø ¢¸");
+				System.out.println("[ Day " + day + " íŒë§¤ ì¢…ë£Œ ]");
+				System.out.println("â–¶ ì „ì²´ ìˆ˜ìµ : " + money + "ì› â—€");
 
 				System.out.println();
 				System.out.println("===============================================================");
 
 				if (day < 5) {
-					System.out.print("´ÙÀ½³¯·Î °¥±î¿ä? " + talkSub + "³×" + talkSub + "¶ó°í ÀÔ·Â >> ");
+					System.out.print("ë‹¤ìŒë‚ ë¡œ ê°ˆê¹Œìš”? " + talkSub + "ë„¤" + talkSub + "ë¼ê³  ì…ë ¥ >> ");
 					enter = sc.next();
 				}
 
@@ -184,7 +184,7 @@ public class Assembly extends StartingSub implements Tutorial {
 		MemberDAO dao = new MemberDAO();
 
 		dao.updateMoney(money, enter);
-		// money¿¡ Àß ´ã¾ÆÁö´ÂÁö È®ÀÎÇÏ´Â ¿ëµµÀÇ print
+		// moneyì— ì˜ ë‹´ì•„ì§€ëŠ”ì§€ í™•ì¸í•˜ëŠ” ìš©ë„ì˜ print
 
 	}
 

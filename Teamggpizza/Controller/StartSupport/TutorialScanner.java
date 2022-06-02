@@ -24,7 +24,6 @@ public class TutorialScanner extends StartingSub {
 		number = sc.nextInt(); 
 		// number에 수 할당, number에 따라 각기 다른 메뉴 전개
 		System.out.println();
-		
 	}
 
 }
