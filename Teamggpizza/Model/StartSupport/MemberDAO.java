@@ -264,11 +264,13 @@ public void select() {
 			String name = dto.getName();
 			int money1 = dto.getMoney(money);
 			
-			String sql = "insert into member values(?, ?, ?, ?)";
+			String sql = "insert into member values(?, ?, ?,?)";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1, id);
 			psmt.setString(2, pw);
 			psmt.setString(3, name);
+			psmt.setInt(4, money1);
+			
 			
 			// sql문을 실행하기 전에 ?를 채우자
 			cnt = psmt.executeUpdate();
@@ -279,7 +281,7 @@ public void select() {
 			System.out.println("드라이버 로딩 실패");
 		} catch (SQLException e) {
 			
-//			e.printStackTrace();
+			e.printStackTrace();
 			System.out.println("회원가입 실패");
 		} finally {
 			// 4. 연결 종료 : 역순으로 닫는다!!
@@ -460,7 +462,7 @@ public void select() {
 			e.printStackTrace();
 		}
 		
-		String sql = "select NICKNAME from member where id = '"+dto.getId()+"'";
+		String sql = "select NICKNAME from member where id = ?";
 		try {
 			psmt = conn.prepareStatement(sql);
 			rs = psmt.executeQuery();
