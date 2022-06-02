@@ -20,7 +20,7 @@ public class RandomReaction extends StartingSub {
 			reactionList.goodbadAwList.get(rdReaction);
 
 		} else if (awReactionCheck == 0) { // badReaction
-			rdReaction = rd.nextInt(11)+10; // bad 리엑션 리스트에 있는 인덱스 0~9까지 불러오기
+			rdReaction = rd.nextInt(11)+11; // bad 리엑션 리스트에 있는 인덱스 11~22까지 불러오기
 			reactionList.goodbadAwList.get(rdReaction);
 			life += 1;
 		}
